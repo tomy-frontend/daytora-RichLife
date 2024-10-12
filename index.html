@@ -1,1184 +1,1494 @@
 <!DOCTYPE html>
 <html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rich-Life | いつでもどこでも。わたしの好きが集まる暮らし。</title>
+    <meta
+      name="description"
+      content="Rich-Lifeで、本当に好きなものに囲まれる理想の暮らしを。初期コストを抑えて気軽に質の良い空間を手に入れることができます。お気に入りのアイテムを集めて自分だけの空間を作りましょう。"
+    />
+    <meta name="robots" content="noindex" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      property="og:title"
+      content="Rich-Life|いつでもどこでも。わたしの好きが集まる暮らし。"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://tomy-frontend.github.io/daytora-RichLife/public/assets/img/ogp/OGP.jpg"
+    />
+    <meta
+      property="og:description"
+      content="Rich-Lifeで、本当に好きなものに囲まれる理想の暮らしを。初期コストを抑えて気軽に質の良い空間を手に入れることができます。お気に入りのアイテムを集めて自分だけの空間を作りましょう。"
+    />
+    <meta
+      property="og:site_name"
+      content="Rich-Life|いつでもどこでも。わたしの好きが集まる暮らし。"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/webmanifest/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./assets/img/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Rich-Life | いつでもどこでも。わたしの好きが集まる暮らし。</title>
-	<meta name="description" content="Rich-Lifeで、本当に好きなものに囲まれる理想の暮らしを。初期コストを抑えて気軽に質の良い空間を手に入れることができます。お気に入りのアイテムを集めて自分だけの空間を作りましょう。" />
-	<!-- 検索結果に非表示にする -->
-	<meta name="robots" content="noindex" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta property="og:title" content="Rich-Life|いつでもどこでも。わたしの好きが集まる暮らし。" />
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="" />
-	<meta property="og:image" content="https://アップデータ先のドメイン/public/assets/img/ogp/OGP.jpg" />
-	<meta property="og:description" content="Rich-Lifeで、本当に好きなものに囲まれる理想の暮らしを。初期コストを抑えて気軽に質の良い空間を手に入れることができます。お気に入りのアイテムを集めて自分だけの空間を作りましょう。" />
-	<meta property="og:site_name" content="Rich-Life|いつでもどこでも。わたしの好きが集まる暮らし。" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"
+    />
+    <script src="./assets/js/main.js" defer></script>
+    <link rel="stylesheet" href="./assets/css/main.css">
+  </head>
+  <body>
+    <!-- p-header -->
+    <header class="p-header l-header">
+      <div class="p-header__inner">
+        <!-- p-nav -->
+        <nav class="p-nav" aria-label="global-navigation">
+          <!-- p-nav__left -->
+          <div class="p-nav__left">
+            <!-- p-nav__logo -->
+            <h1 class="p-nav__logo">
+              <a class="p-nav__link" href="/"
+                ><img
+                  class="p-nav__logo-img"
+                  src="data:image/webp;base64,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"
+                  alt="Rich-Life"
+                  width="52"
+                  height="21"
+                  decoding="async"
+              /></a>
+            </h1>
+            <!-- p-nav__logo -->
+          </div>
+          <!-- p-nav__left -->
 
-	<!-- twitter-card -->
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:site" content="@twitter_user_name" />
-	<meta name="twitter:title" content="Rich-Life|いつでもどこでも。わたしの好きが集まる暮らし。" />
-	<meta name="twitter:description" content="Rich-Lifeで、本当に好きなものに囲まれる理想の暮らしを。初期コストを抑えて気軽に質の良い空間を手に入れることができます。お気に入りのアイテムを集めて自分だけの空間を作りましょう。" />
-	<meta name="twitter:image" content="https://アップデータ先のドメイン/public/assets/img/ogp/OGP.jpg" />
+          <!-- p-nav__right -->
+          <div class="p-nav__right">
+            <!-- p-nav__list -->
+            <ul class="p-nav__list">
+              <li
+                id="js-menu-furniture"
+                class="p-nav__item p-nav__item--furniture"
+              >
+                <a class="p-nav__link p-nav__link--bg" href="">家具</a>
+              </li>
+              <li
+                id="js-menu-appliances"
+                class="p-nav__item p-nav__item--appliances"
+              >
+                <a class="p-nav__link p-nav__link--bg" href="">家電</a>
+              </li>
+              <li class="p-nav__item u-hidden-sp">
+                <a class="p-nav__link" href="/">法人のお客様へ</a>
+              </li>
+            </ul>
+            <!-- p-nav__list -->
 
-	<!-- favicon画像設定 -->
-	<link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon/apple-touch-icon.png" />
-	<link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon/favicon-32x32.png" />
-	<link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon/favicon-16x16.png" />
-	<link rel="manifest" href="./assets/img/favicon/site.webmanifest" />
-	<link rel="mask-icon" href="./assets/img/favicon/safari-pinned-tab.svg" color="#5bbad5" />
-	<meta name="msapplication-TileColor" content="#da532c" />
-	<meta name="theme-color" content="#ffffff" />
+            <!-- p-nav__shopping -->
+            <ul class="p-nav__shopping">
+              <li class="p-nav__icon">
+                <a class="p-nav__link u-hidden-pc" href="/"
+                  ><img
+                    src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M3.6%203.6001C3.91826%203.6001%204.22349%203.72653%204.44853%203.95157C4.67357%204.17661%204.8%204.48184%204.8%204.8001V19.2001C4.8%2019.5184%204.67357%2019.8236%204.44853%2020.0486C4.22349%2020.2737%203.91826%2020.4001%203.6%2020.4001C3.28174%2020.4001%202.97652%2020.2737%202.75147%2020.0486C2.52643%2019.8236%202.4%2019.5184%202.4%2019.2001V4.8001C2.4%204.48184%202.52643%204.17661%202.75147%203.95157C2.97652%203.72653%203.28174%203.6001%203.6%203.6001ZM12.8484%207.5517C13.0734%207.77673%2013.1997%208.0819%2013.1997%208.4001C13.1997%208.71829%2013.0734%209.02346%2012.8484%209.2485L11.2968%2010.8001H20.4C20.7183%2010.8001%2021.0235%2010.9265%2021.2485%2011.1516C21.4736%2011.3766%2021.6%2011.6818%2021.6%2012.0001C21.6%2012.3184%2021.4736%2012.6236%2021.2485%2012.8486C21.0235%2013.0737%2020.7183%2013.2001%2020.4%2013.2001H11.2968L12.8484%2014.7517C13.067%2014.978%2013.1879%2015.2811%2013.1852%2015.5958C13.1825%2015.9104%2013.0563%2016.2114%2012.8338%2016.4339C12.6113%2016.6564%2012.3103%2016.7826%2011.9957%2016.7853C11.681%2016.788%2011.3779%2016.6671%2011.1516%2016.4485L7.5516%2012.8485C7.32664%2012.6235%207.20026%2012.3183%207.20026%2012.0001C7.20026%2011.6819%207.32664%2011.3767%207.5516%2011.1517L11.1516%207.5517C11.3766%207.32673%2011.6818%207.20035%2012%207.20035C12.3182%207.20035%2012.6234%207.32673%2012.8484%207.5517Z'%20fill='%23565956'/%3e%3c/svg%3e"
+                    alt="ログアウト"
+                    width="24"
+                    height="24"
+                    decoding="async"
+                /></a>
+              </li>
+              <li class="p-nav__btn">
+                <a class="c-btn u-hidden-sp" href="/">ログイン/会員登録</a>
+              </li>
+              <li class="p-nav__icon">
+                <a class="p-nav__link" href="/"
+                  ><img
+                    src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.6%201.2002C3.28174%201.2002%202.97652%201.32662%202.75147%201.55167C2.52643%201.77671%202.4%202.08194%202.4%202.4002C2.4%202.71846%202.52643%203.02368%202.75147%203.24872C2.97652%203.47377%203.28174%203.6002%203.6%203.6002H5.064L5.43%205.0666C5.43364%205.08348%205.43764%205.10028%205.442%205.117L7.0716%2011.633L6%2012.7034C4.488%2014.2154%205.5584%2016.8002%207.6968%2016.8002H18C18.3183%2016.8002%2018.6235%2016.6738%2018.8485%2016.4487C19.0736%2016.2237%2019.2%2015.9185%2019.2%2015.6002C19.2%2015.2819%2019.0736%2014.9767%2018.8485%2014.7517C18.6235%2014.5266%2018.3183%2014.4002%2018%2014.4002H7.6968L8.8968%2013.2002H16.8C17.0228%2013.2001%2017.2412%2013.1379%2017.4306%2013.0207C17.6201%2012.9035%2017.7732%2012.7359%2017.8728%2012.5366L21.4728%205.3366C21.5642%205.15369%2021.6073%204.95046%2021.5981%204.7462C21.5889%204.54194%2021.5277%204.34342%2021.4202%204.16947C21.3128%203.99552%2021.1626%203.85192%2020.9841%203.75229C20.8055%203.65266%2020.6045%203.6003%2020.4%203.6002H7.536L7.164%202.1086C7.099%201.8491%206.94914%201.61877%206.73825%201.45418C6.52736%201.2896%206.26752%201.2002%206%201.2002H3.6ZM19.2%2019.8002C19.2%2020.2776%2019.0104%2020.7354%2018.6728%2021.073C18.3352%2021.4106%2017.8774%2021.6002%2017.4%2021.6002C16.9226%2021.6002%2016.4648%2021.4106%2016.1272%2021.073C15.7896%2020.7354%2015.6%2020.2776%2015.6%2019.8002C15.6%2019.3228%2015.7896%2018.865%2016.1272%2018.5274C16.4648%2018.1898%2016.9226%2018.0002%2017.4%2018.0002C17.8774%2018.0002%2018.3352%2018.1898%2018.6728%2018.5274C19.0104%2018.865%2019.2%2019.3228%2019.2%2019.8002ZM7.8%2021.6002C8.27739%2021.6002%208.73523%2021.4106%209.07279%2021.073C9.41036%2020.7354%209.6%2020.2776%209.6%2019.8002C9.6%2019.3228%209.41036%2018.865%209.07279%2018.5274C8.73523%2018.1898%208.27739%2018.0002%207.8%2018.0002C7.32261%2018.0002%206.86477%2018.1898%206.52721%2018.5274C6.18964%2018.865%206%2019.3228%206%2019.8002C6%2020.2776%206.18964%2020.7354%206.52721%2021.073C6.86477%2021.4106%207.32261%2021.6002%207.8%2021.6002Z'%20fill='%23565956'/%3e%3c/svg%3e"
+                    alt="ショッピングカート"
+                    width="24"
+                    height="24"
+                    decoding="async"
+                /></a>
+              </li>
+            </ul>
+            <!-- p-nav__shopping -->
+          </div>
+          <!-- p-nav__right -->
+        </nav>
+        <!-- p-nav -->
+      </div>
 
-	<!-- Googleフォント読み込み -->
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet" />
-	<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+      <!-- p-global-menu 家具 -->
+      <div id="js-mega-furniture" class="p-global-menu mega-menu-furniture">
+        <div class="p-global-menu__head">家具</div>
+        <!-- p-global-menu__nav -->
+        <nav class="p-global-menu__nav" aria-label="mega-menu-furniture">
+          <!-- p-global-menu__list -->
+          <ul class="p-global-menu__list">
+            <a href="/" class="p-global-menu__item">すべて</a>
+            <a href="/" class="p-global-menu__item">ソファ</a>
+            <a href="/" class="p-global-menu__item">ベッド・寝具</a>
+            <a href="/" class="p-global-menu__item">チェア</a>
+            <a href="/" class="p-global-menu__item">ダイニング</a>
+            <a href="/" class="p-global-menu__item">デスク</a>
+            <a href="/" class="p-global-menu__item">収納用品・ケース</a>
+            <a href="/" class="p-global-menu__item">テレビ台</a>
+            <a href="/" class="p-global-menu__item">照明</a>
+            <a href="/" class="p-global-menu__item">カーテン</a>
+            <a href="/" class="p-global-menu__item">観葉植物</a>
+            <a href="/" class="p-global-menu__item">その他家具</a>
+          </ul>
+          <!-- p-global-menu__list -->
+        </nav>
+        <!-- p-global-menu__nav -->
+      </div>
+      <!-- p-global-menu -->
+      <!-- p-global-menu 家電 -->
+      <div id="js-mega-appliances" class="p-global-menu mega-menu-appliances">
+        <div class="p-global-menu__head">家電</div>
+        <!-- p-global-menu__nav -->
+        <nav class="p-global-menu__nav" aria-label="mega-menu-appliances">
+          <!-- p-global-menu__list -->
+          <ul class="p-global-menu__list">
+            <a href="/" class="p-global-menu__item">すべて</a>
+            <a href="/" class="p-global-menu__item">洗濯機</a>
+            <a href="/" class="p-global-menu__item">冷蔵庫</a>
+            <a href="/" class="p-global-menu__item">電子レンジ</a>
+            <a href="/" class="p-global-menu__item">テレビ</a>
+            <a href="/" class="p-global-menu__item">掃除機</a>
+            <a href="/" class="p-global-menu__item">AV機器</a>
+            <a href="/" class="p-global-menu__item">空調</a>
+            <a href="/" class="p-global-menu__item">美容</a>
+            <a href="/" class="p-global-menu__item">その他家電</a>
+          </ul>
+          <!-- p-global-menu__list -->
+        </nav>
+        <!-- p-global-menu__nav -->
+      </div>
+      <!-- p-global-menu -->
+    </header>
+    <!-- p-header -->
 
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+    <!-- mask -->
+    <div id="js-mask" class="u-mask"></div>
+    <!-- mask -->
 
-	<!-- css読み込み -->
-	<link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
-	<link rel="stylesheet" href="./assets/css/style.css" />
-</head>
+    <main>
+      <!-- p-fv -->
+      <div class="p-fv l-fv">
+        <!-- p-fv__text-block -->
+        <div class="p-fv__text-block">
+          <h2 class="p-fv__title jsfadeIn">いつでもどこでも。</h2>
+          <h2 class="p-fv__title u-hidden-pc jsfadeIn">わたしの好きが集まる</h2>
+          <h2 class="p-fv__title u-hidden-pc jsfadeIn">暮らし。</h2>
+          <h2 class="p-fv__title u-hidden-sp jsfadeIn">
+            わたしの好きが集まる暮らし。
+          </h2>
+          <p class="p-fv__lead jsfadeIn">おうち空間を自由かつ手軽に模様替え</p>
+        </div>
+        <!-- p-fv__text-block -->
+      </div>
+      <!-- p-fv -->
 
-<body>
-	<!-- p-header -->
-	<header class="p-header l-header">
-		<div class="p-header__inner">
-			<!-- p-nav -->
-			<nav class="p-nav">
-				<!-- p-nav__left -->
-				<div class="p-nav__left">
-					<!-- p-nav__logo -->
-					<h1 class="p-nav__logo">
-						<a class="p-nav__link" href="/"><img class="p-nav__logo-img" src="./assets/img/icon/logo.png" alt="Rich-Life" width="52" height="21" /></a>
-					</h1>
-					<!-- p-nav__logo -->
-				</div>
-				<!-- p-nav__left -->
+      <!-- p-cta -->
+      <section class="p-cta l-cta jsfadeIn">
+        <div class="p-cta__outer">
+          <!-- p-cta__inner -->
+          <div class="p-cta__inner l-inner">
+            <!-- p-cta__contents -->
+            <div class="p-cta__contents">
+              <!-- p-cta__text-block -->
+              <div class="p-cta__text-block">
+                <div class="p-cta__ribbon">今だけ</div>
+                <p class="p-cta__lead">高品質でセンスのいい家具・家電を</p>
+                <p class="p-cta__copy">
+                  10%0FF価格で<br class="u-hidden-pc" />レンタルできます。
+                </p>
+              </div>
+              <!-- p-cta__text-block -->
 
-				<!-- p-nav__right -->
-				<div class="p-nav__right">
-					<!-- p-nav__list -->
-					<ul class="p-nav__list">
-						<li id="js-menu-furniture" class="p-nav__item p-nav__item--furniture">
-							<a class="p-nav__link p-nav__link--bg" href="">家具</a>
-						</li>
-						<li id="js-menu-appliances" class="p-nav__item p-nav__item--appliances">
-							<a class="p-nav__link p-nav__link--bg" href="">家電</a>
-						</li>
-						<li class="p-nav__item u-hidden-sp">
-							<a class="p-nav__link" href="#">法人のお客様へ</a>
-						</li>
-					</ul>
-					<!-- p-nav__list -->
+              <!-- p-cta__merit-container -->
+              <div class="p-cta__merit-container">
+                <div class="c-merit-block">月額440円〜</div>
+                <div class="c-merit-block">1ヶ月〜レンタル可能</div>
+                <div class="c-merit-block">長期レンタル割引あり</div>
+              </div>
+              <!-- p-cta__merit-container -->
 
-					<!-- p-nav__shopping -->
-					<ul class="p-nav__shopping">
-						<li class="p-nav__icon">
-							<a class="p-nav__link u-hidden-pc" href="#"><img src="./assets/img/icon/Logout.svg" alt="ログアウト" width="24" height="24" /></a>
-						</li>
-						<li class="p-nav__btn">
-							<a class="c-btn u-hidden-sp" href="#">ログイン/会員登録</a>
-						</li>
-						<li class="p-nav__icon">
-							<a class="p-nav__link" href="#"><img src="./assets/img/icon/ShoppingCart.svg" alt="ショッピングカート" width="24" height="24" /></a>
-						</li>
-					</ul>
-					<!-- p-nav__shopping -->
-				</div>
-				<!-- p-nav__right -->
-			</nav>
-			<!-- p-nav -->
-		</div>
+              <!-- p-cta__btn-container -->
+              <div class="p-cta__btn-container">
+                <div class="c-btn-guide">カンタン！ 3 STEP</div>
+                <a href="/" class="c-btn c-btn--register">今すぐ会員登録</a>
+              </div>
+              <!-- p-cta__btn-container -->
+            </div>
+            <!-- p-cta__contents -->
+          </div>
+          <!-- p-cta__inner -->
+        </div>
+      </section>
+      <!-- p-cta -->
 
-		<!-- p-global-menu 家具 -->
-		<div id="js-mega-furniture" class="p-global-menu mega-menu-furniture">
-			<div class="p-global-menu__head">家具</div>
-			<!-- p-global-menu__nav -->
-			<nav class="p-global-menu__nav">
-				<!-- p-global-menu__list -->
-				<ul class="p-global-menu__list">
-					<a href="#" class="p-global-menu__item">すべて</a>
-					<a href="#" class="p-global-menu__item">ソファ</a>
-					<a href="#" class="p-global-menu__item">ベッド・寝具</a>
-					<a href="#" class="p-global-menu__item">チェア</a>
-					<a href="#" class="p-global-menu__item">ダイニング</a>
-					<a href="#" class="p-global-menu__item">デスク</a>
-					<a href="#" class="p-global-menu__item">収納用品・ケース</a>
-					<a href="#" class="p-global-menu__item">テレビ台</a>
-					<a href="#" class="p-global-menu__item">照明</a>
-					<a href="#" class="p-global-menu__item">カーテン</a>
-					<a href="#" class="p-global-menu__item">観葉植物</a>
-					<a href="#" class="p-global-menu__item">その他家具</a>
-				</ul>
-				<!-- p-global-menu__list -->
-			</nav>
-			<!-- p-global-menu__nav -->
-		</div>
-		<!-- p-global-menu -->
-		<!-- p-global-menu 家電 -->
-		<div id="js-mega-appliances" class="p-global-menu mega-menu-appliances">
-			<div class="p-global-menu__head">家電</div>
-			<!-- p-global-menu__nav -->
-			<nav class="p-global-menu__nav">
-				<!-- p-global-menu__list -->
-				<ul class="p-global-menu__list">
-					<a href="#" class="p-global-menu__item">すべて</a>
-					<a href="#" class="p-global-menu__item">洗濯機</a>
-					<a href="#" class="p-global-menu__item">冷蔵庫</a>
-					<a href="#" class="p-global-menu__item">電子レンジ</a>
-					<a href="#" class="p-global-menu__item">テレビ</a>
-					<a href="#" class="p-global-menu__item">掃除機</a>
-					<a href="#" class="p-global-menu__item">AV機器</a>
-					<a href="#" class="p-global-menu__item">空調</a>
-					<a href="#" class="p-global-menu__item">美容</a>
-					<a href="#" class="p-global-menu__item">その他家電</a>
-				</ul>
-				<!-- p-global-menu__list -->
-			</nav>
-			<!-- p-global-menu__nav -->
-		</div>
-		<!-- p-global-menu -->
-	</header>
-	<!-- p-header -->
+      <!-- p-benefit -->
+      <section class="p-benefit jsfadeIn">
+        <div class="p-benefit__inner l-inner">
+          <!-- p-benefit__container -->
+          <div class="p-benefit__container">
+            <div class="p-benefit__heading">
+              <div class="c-section-title">
+                <h2 class="c-section-title__jp">
+                  Rich-Lifeがお約束する、<br class="u-hidden-pc" />5つの暮らし
+                </h2>
+                <p class="c-section-title__en">REALIZATION</p>
+              </div>
+            </div>
+            <!-- p-benefit__heading -->
 
-	<!-- mask -->
-	<div id="js-mask" class="u-mask"></div>
-	<!-- mask -->
+            <!-- p-benefit__contents -->
+            <div class="p-benefit__contents">
+              <!-- p-benefit__item -->
+              <div class="p-benefit__item jsfadeIn">
+                <h3 class="p-benefit__item-title">reason 01</h3>
+                <div class="p-benefit__item-img">
+                  <img
+                    src="./assets/webp/p-benefit__item-1.webp"
+                    alt="椅子"
+                    width="337"
+                    height="336"
+                    loading="lazy"
+                  />
+                </div>
+                <p class="p-benefit__item-text">
+                  交換・返却費が無料で「今」最適な空間を選べる
+                </p>
+              </div>
+              <!-- p-benefit__item -->
+              <!-- p-benefit__item -->
+              <div class="p-benefit__item jsfadeIn">
+                <h3 class="p-benefit__item-title">reason 02</h3>
+                <div class="p-benefit__item-img">
+                  <img
+                    src="data:image/webp;base64,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"
+                    alt="椅子に座る人"
+                    width="336"
+                    height="337"
+                    loading="lazy"
+                  />
+                </div>
+                <p class="p-benefit__item-text">
+                  初期コスト抑え、気軽に質の良い空間を手に入れられる
+                </p>
+              </div>
+              <!-- p-benefit__item -->
+              <!-- p-benefit__item -->
+              <div class="p-benefit__item jsfadeIn">
+                <h3 class="p-benefit__item-title">reason 03</h3>
+                <div class="p-benefit__item-img">
+                  <img
+                    src="./assets/webp/p-benefit__item-3.webp"
+                    alt="歩く人"
+                    width="336"
+                    height="337"
+                    loading="lazy"
+                  />
+                </div>
+                <p class="p-benefit__item-text">
+                  モノを持たずに引っ越しや模様替えを楽しめる
+                </p>
+              </div>
+              <!-- p-benefit__item -->
+              <!-- p-benefit__item -->
+              <div class="p-benefit__item jsfadeIn">
+                <h3 class="p-benefit__item-title">reason 04</h3>
+                <div class="p-benefit__item-img">
+                  <img
+                    src="./assets/webp/p-benefit__item-4.webp"
+                    alt="地球"
+                    width="336"
+                    height="337"
+                    loading="lazy"
+                  />
+                </div>
+                <p class="p-benefit__item-text">
+                  モノをなるべく捨てない、環境に優しい暮らし
+                </p>
+              </div>
+              <!-- p-benefit__item -->
+              <!-- p-benefit__item -->
+              <div class="p-benefit__item jsfadeIn">
+                <h3 class="p-benefit__item-title">reason 05</h3>
+                <div class="p-benefit__item-img">
+                  <img
+                    src="./assets/webp/p-benefit__item-5.webp"
+                    alt="椅子"
+                    width="336"
+                    height="337"
+                    loading="lazy"
+                  />
+                </div>
+                <p class="p-benefit__item-text">
+                  本当に好きなモノに<br />囲まれる<br />豊かな暮らし
+                </p>
+              </div>
+              <!-- p-benefit__item -->
+            </div>
+            <!-- p-benefit__contents -->
+          </div>
+          <!-- p-benefit__container -->
+        </div>
+        <!-- p-benefit__inner -->
+      </section>
+      <!-- p-benefit -->
 
-	<main>
-		<!-- p-fv -->
-		<div class="p-fv l-fv">
-			<!-- p-fv__text-block -->
-			<div class="p-fv__text-block">
-				<h2 class="p-fv__title fade1">いつでもどこでも。</h2>
-				<h2 class="p-fv__title u-hidden-pc fade1">わたしの好きが集まる</h2>
-				<h2 class="p-fv__title u-hidden-pc fade1">暮らし。</h2>
-				<h2 class="p-fv__title u-hidden-sp fade1">
-					わたしの好きが集まる暮らし。
-				</h2>
-				<p class="p-fv__lead fade2">おうち空間を自由かつ手軽に模様替え</p>
-			</div>
-			<!-- p-fv__text-block -->
-		</div>
-		<!-- p-fv -->
+      <!-- p-authority -->
+      <section class="p-authority jsfadeIn">
+        <div class="p-authority__inner">
+          <div class="p-authority__contents">
+            <p class="p-authority__text">
+              おかげさまで<br class="u-hidden-pc" />Rich-Life USER 総会員数
+            </p>
+            <h3 class="p-authority__emphasis">16万人突破!</h3>
+          </div>
+        </div>
+      </section>
+      <!-- p-authority -->
 
-		<!-- p-cta -->
-		<section class="p-cta l-cta fade1">
-			<div class="p-cta__outer">
-				<!-- p-cta__inner -->
-				<div class="p-cta__inner l-inner">
-					<!-- p-cta__contents -->
-					<div class="p-cta__contents">
-						<!-- p-cta__text-block -->
-						<div class="p-cta__text-block fade1">
-							<div class="p-cta__ribbon">今だけ</div>
-							<p class="p-cta__lead">高品質でセンスのいい家具・家電を</p>
-							<p class="p-cta__copy">
-								10%0FF価格で<br class="u-hidden-pc" />レンタルできます。
-							</p>
-						</div>
-						<!-- p-cta__text-block -->
+      <!-- p-voice -->
+      <section class="p-voice l-voice jsfadeIn">
+        <div class="p-voice__inner l-inner">
+          <div class="p-voice__container">
+            <div class="c-section-title">
+              <h2 class="c-section-title__jp">利用者さまの声</h2>
+              <p class="c-section-title__en">VOICE</p>
+            </div>
 
-						<!-- p-cta__merit-container -->
-						<div class="p-cta__merit-container fade2">
-							<div class="c-merit-block">月額440円〜</div>
-							<div class="c-merit-block">1ヶ月〜レンタル可能</div>
-							<div class="c-merit-block">長期レンタル割引あり</div>
-						</div>
-						<!-- p-cta__merit-container -->
+            <!-- p-voice__contents -->
+            <div class="p-voice__contents">
+              <!-- p-voice__item -->
+              <div class="p-voice__item jsfadeIn">
+                <div class="p-voice__item-img">
+                  <img
+                    src="./assets/webp/review1.webp"
+                    alt="review01"
+                    width="686"
+                    height="384"
+                    loading="lazy"
+                  />
+                  <div class="p-voice__item-img-ribbon">REVIEW 01</div>
+                </div>
+                <div class="p-voice__text-block">
+                  <div class="p-voice__item-copy">
+                    <p class="p-voice__copy-text">センスのいい家具で</p>
+                    <p class="p-voice__copy-text">ワンランク上のお部屋に</p>
+                  </div>
+                  <p class="p-voice__text">
+                    必要なときにだけ借りることができるコンセプトに魅力を感じて利用。<br />
+                    レンタルできる家具はどれもセンスが良いので、ハズレがありません。そしてRich-Lifeの家具をお迎えしたことで、いつものおうち空間がワンランク上の部屋になって本当にうれしいです。<br />
+                    今ではシーズンごとに家具のテイストを変えるのが楽しみになっています。
+                  </p>
+                  <p class="p-voice__reviewer">20代女性・XXXX子さん</p>
+                </div>
+              </div>
+              <!-- p-voice__item -->
+              <!-- p-voice__item -->
+              <div class="p-voice__item jsfadeIn">
+                <div class="p-voice__item-img">
+                  <img
+                    src="./assets/webp/review2.webp"
+                    alt="review02"
+                    width="686"
+                    height="386"
+                    loading="lazy"
+                  />
+                  <div class="p-voice__item-img-ribbon">REVIEW 02</div>
+                </div>
+                <div class="p-voice__text-block">
+                  <div class="p-voice__item-copy">
+                    <p class="p-voice__copy-text">家具家電を汚した時の</p>
+                    <p class="p-voice__copy-text">レンタル保証がうれしい。</p>
+                  </div>
+                  <p class="p-voice__text">
+                    家具のレンタルに興味はあったものの、小さい子どもがいるので家具・家電を汚してしまった時のことが心配でなかなか踏み切れずにいました。ですがRich-Lifeは家具を汚したときの保証があるので安心して利用できています。以前子供がソファーに飲み物をこぼしてしまったのですが無料で交換してくれてとても助かりました。
+                  </p>
+                  <p class="p-voice__reviewer">30代女性・XXXX子さん</p>
+                </div>
+              </div>
+              <!-- p-voice__item -->
+              <!-- p-voice__item -->
+              <div class="p-voice__item jsfadeIn">
+                <div class="p-voice__item-img">
+                  <img
+                    src="./assets/webp/review3.webp"
+                    alt="review03"
+                    width="686"
+                    height="382"
+                    loading="lazy"
+                  />
+                  <div class="p-voice__item-img-ribbon">REVIEW 03</div>
+                </div>
+                <div class="p-voice__text-block">
+                  <div class="p-voice__item-copy">
+                    <p class="p-voice__copy-text">本当に好きなモノに囲まれる</p>
+                    <p class="p-voice__copy-text">豊かな暮らしを。</p>
+                  </div>
+                  <p class="p-voice__text">
+                    子どもが巣立ち、これからは必要最小限でかつ品質の良いお気に入りのモノたちに囲まれた生活をしたいと思っていました。でもいきなり購入するのは気が引ける、と思っていたところこちらのサービスを見つけました。月額440円〜利用できますので色々試しながらこれからの自分たちに合った家具・家電を探しています。
+                  </p>
+                  <p class="p-voice__reviewer">50代女性・XXXX子さん</p>
+                </div>
+              </div>
+              <!-- p-voice__item -->
+            </div>
+            <!-- p-voice__contents -->
+          </div>
+        </div>
+      </section>
+      <!-- p-voice -->
 
-						<!-- p-cta__btn-container -->
-						<div class="p-cta__btn-container fade2">
-							<div class="c-btn-guide">カンタン！ 3 STEP</div>
-							<a href="#" class="c-btn c-btn--register">今すぐ会員登録</a>
-						</div>
-						<!-- p-cta__btn-container -->
-					</div>
-					<!-- p-cta__contents -->
-				</div>
-				<!-- p-cta__inner -->
-			</div>
-		</section>
-		<!-- p-cta -->
+      <!-- p-solution -->
+      <section class="p-solution jsfadeIn">
+        <div class="p-solution__inner l-inner">
+          <div class="p-solution__container">
+            <div class="c-section-title">
+              <h2 class="c-section-title__jp">
+                こんなことでお悩みではないですか？
+              </h2>
+              <p class="c-section-title__en">SOLUTION</p>
+            </div>
 
-		<!-- p-benefit -->
-		<section class="p-benefit fade1">
-			<div class="p-benefit__inner l-inner">
-				<!-- p-benefit__container -->
-				<div class="p-benefit__container">
-					<div class="p-benefit__heading">
-						<div class="c-section-title">
-							<h2 class="c-section-title__jp">
-								Rich-Lifeがお約束する、<br class="u-hidden-pc" />5つの暮らし
-							</h2>
-							<p class="c-section-title__en">REALIZATION</p>
-						</div>
-					</div>
-					<!-- p-benefit__heading -->
+            <!-- p-solution__contents -->
+            <div class="p-solution__contents">
+              <!-- p-solution__item -->
+              <div class="p-solution__item jsfadeIn">
+                <div class="p-solution__icon">
+                  <img
+                    src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_1_1089)'%3e%3cpath%20d='M16%2030.001C12.287%2030.001%208.72601%2028.526%206.1005%2025.9005C3.475%2023.275%202%2019.714%202%2016.001C2%2012.2879%203.475%208.72699%206.1005%206.10148C8.72601%203.47597%2012.287%202.00098%2016%202.00098C19.713%202.00098%2023.274%203.47597%2025.8995%206.10148C28.525%208.72699%2030%2012.2879%2030%2016.001C30%2019.714%2028.525%2023.275%2025.8995%2025.9005C23.274%2028.526%2019.713%2030.001%2016%2030.001ZM16%2032.001C20.2435%2032.001%2024.3131%2030.3153%2027.3137%2027.3147C30.3143%2024.3141%2032%2020.2444%2032%2016.001C32%2011.7575%2030.3143%207.68785%2027.3137%204.68727C24.3131%201.68669%2020.2435%200.000976563%2016%200.000976562C11.7565%200.000976563%207.68687%201.68669%204.68629%204.68727C1.68571%207.68785%200%2011.7575%200%2016.001C0%2020.2444%201.68571%2024.3141%204.68629%2027.3147C7.68687%2030.3153%2011.7565%2032.001%2016%2032.001Z'%20fill='%23609484'/%3e%3cpath%20d='M21.94%209.94099C21.9258%209.9548%2021.9124%209.96949%2021.9%209.98499L14.954%2018.835L10.768%2014.647C10.4837%2014.382%2010.1076%2014.2378%209.71896%2014.2446C9.33036%2014.2515%208.95959%2014.4089%208.68476%2014.6837C8.40994%2014.9586%208.25251%2015.3293%208.24566%2015.7179C8.2388%2016.1065%208.38305%2016.4826%208.64801%2016.767L13.94%2022.061C14.0826%2022.2033%2014.2523%2022.3154%2014.4392%2022.3907C14.626%2022.466%2014.8261%2022.5028%2015.0275%2022.4991C15.2289%2022.4954%2015.4275%2022.4511%2015.6114%2022.369C15.7953%2022.2868%2015.9608%2022.1685%2016.098%2022.021L24.082%2012.041C24.3539%2011.7556%2024.5025%2011.3748%2024.4958%2010.9807C24.4891%2010.5867%2024.3275%2010.2111%2024.0461%209.93518C23.7647%209.65927%2023.386%209.5052%2022.9919%209.50629C22.5978%209.50738%2022.2199%209.66353%2021.94%209.94099Z'%20fill='%23609484'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_1_1089'%3e%3crect%20width='32'%20height='32'%20fill='white'%20transform='translate(0%200.000976562)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"
+                    alt="check-icon"
+                    width="32"
+                    height="32"
+                    loading="lazy"
+                  />
+                </div>
+                <p class="p-solution__text">
+                  しっくりくる家具を選びたい。でもいきなり買うのは自信がない
+                </p>
+              </div>
+              <!-- p-solution__item -->
+              <!-- p-solution__item -->
+              <div class="p-solution__item jsfadeIn">
+                <div class="p-solution__icon">
+                  <img
+                    src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_1_1089)'%3e%3cpath%20d='M16%2030.001C12.287%2030.001%208.72601%2028.526%206.1005%2025.9005C3.475%2023.275%202%2019.714%202%2016.001C2%2012.2879%203.475%208.72699%206.1005%206.10148C8.72601%203.47597%2012.287%202.00098%2016%202.00098C19.713%202.00098%2023.274%203.47597%2025.8995%206.10148C28.525%208.72699%2030%2012.2879%2030%2016.001C30%2019.714%2028.525%2023.275%2025.8995%2025.9005C23.274%2028.526%2019.713%2030.001%2016%2030.001ZM16%2032.001C20.2435%2032.001%2024.3131%2030.3153%2027.3137%2027.3147C30.3143%2024.3141%2032%2020.2444%2032%2016.001C32%2011.7575%2030.3143%207.68785%2027.3137%204.68727C24.3131%201.68669%2020.2435%200.000976563%2016%200.000976562C11.7565%200.000976563%207.68687%201.68669%204.68629%204.68727C1.68571%207.68785%200%2011.7575%200%2016.001C0%2020.2444%201.68571%2024.3141%204.68629%2027.3147C7.68687%2030.3153%2011.7565%2032.001%2016%2032.001Z'%20fill='%23609484'/%3e%3cpath%20d='M21.94%209.94099C21.9258%209.9548%2021.9124%209.96949%2021.9%209.98499L14.954%2018.835L10.768%2014.647C10.4837%2014.382%2010.1076%2014.2378%209.71896%2014.2446C9.33036%2014.2515%208.95959%2014.4089%208.68476%2014.6837C8.40994%2014.9586%208.25251%2015.3293%208.24566%2015.7179C8.2388%2016.1065%208.38305%2016.4826%208.64801%2016.767L13.94%2022.061C14.0826%2022.2033%2014.2523%2022.3154%2014.4392%2022.3907C14.626%2022.466%2014.8261%2022.5028%2015.0275%2022.4991C15.2289%2022.4954%2015.4275%2022.4511%2015.6114%2022.369C15.7953%2022.2868%2015.9608%2022.1685%2016.098%2022.021L24.082%2012.041C24.3539%2011.7556%2024.5025%2011.3748%2024.4958%2010.9807C24.4891%2010.5867%2024.3275%2010.2111%2024.0461%209.93518C23.7647%209.65927%2023.386%209.5052%2022.9919%209.50629C22.5978%209.50738%2022.2199%209.66353%2021.94%209.94099Z'%20fill='%23609484'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_1_1089'%3e%3crect%20width='32'%20height='32'%20fill='white'%20transform='translate(0%200.000976562)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"
+                    alt="check-icon"
+                    width="32"
+                    height="32"
+                    loading="lazy"
+                  />
+                </div>
+                <p class="p-solution__text">
+                  引っ越しのたびに物を持っていることが大きな負担である。
+                </p>
+              </div>
+              <!-- p-solution__item -->
+              <!-- p-solution__item -->
+              <div class="p-solution__item jsfadeIn">
+                <div class="p-solution__icon">
+                  <img
+                    src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_1_1089)'%3e%3cpath%20d='M16%2030.001C12.287%2030.001%208.72601%2028.526%206.1005%2025.9005C3.475%2023.275%202%2019.714%202%2016.001C2%2012.2879%203.475%208.72699%206.1005%206.10148C8.72601%203.47597%2012.287%202.00098%2016%202.00098C19.713%202.00098%2023.274%203.47597%2025.8995%206.10148C28.525%208.72699%2030%2012.2879%2030%2016.001C30%2019.714%2028.525%2023.275%2025.8995%2025.9005C23.274%2028.526%2019.713%2030.001%2016%2030.001ZM16%2032.001C20.2435%2032.001%2024.3131%2030.3153%2027.3137%2027.3147C30.3143%2024.3141%2032%2020.2444%2032%2016.001C32%2011.7575%2030.3143%207.68785%2027.3137%204.68727C24.3131%201.68669%2020.2435%200.000976563%2016%200.000976562C11.7565%200.000976563%207.68687%201.68669%204.68629%204.68727C1.68571%207.68785%200%2011.7575%200%2016.001C0%2020.2444%201.68571%2024.3141%204.68629%2027.3147C7.68687%2030.3153%2011.7565%2032.001%2016%2032.001Z'%20fill='%23609484'/%3e%3cpath%20d='M21.94%209.94099C21.9258%209.9548%2021.9124%209.96949%2021.9%209.98499L14.954%2018.835L10.768%2014.647C10.4837%2014.382%2010.1076%2014.2378%209.71896%2014.2446C9.33036%2014.2515%208.95959%2014.4089%208.68476%2014.6837C8.40994%2014.9586%208.25251%2015.3293%208.24566%2015.7179C8.2388%2016.1065%208.38305%2016.4826%208.64801%2016.767L13.94%2022.061C14.0826%2022.2033%2014.2523%2022.3154%2014.4392%2022.3907C14.626%2022.466%2014.8261%2022.5028%2015.0275%2022.4991C15.2289%2022.4954%2015.4275%2022.4511%2015.6114%2022.369C15.7953%2022.2868%2015.9608%2022.1685%2016.098%2022.021L24.082%2012.041C24.3539%2011.7556%2024.5025%2011.3748%2024.4958%2010.9807C24.4891%2010.5867%2024.3275%2010.2111%2024.0461%209.93518C23.7647%209.65927%2023.386%209.5052%2022.9919%209.50629C22.5978%209.50738%2022.2199%209.66353%2021.94%209.94099Z'%20fill='%23609484'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_1_1089'%3e%3crect%20width='32'%20height='32'%20fill='white'%20transform='translate(0%200.000976562)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"
+                    alt="check-icon"
+                    width="32"
+                    height="32"
+                    loading="lazy"
+                  />
+                </div>
+                <p class="p-solution__text">
+                  きちんとした家具を使いたいけど、予算的に負担が大きい
+                </p>
+              </div>
+              <!-- p-solution__item -->
 
-					<!-- p-benefit__contents -->
-					<div class="p-benefit__contents">
-						<!-- p-benefit__item -->
-						<div class="p-benefit__item fade1">
-							<h3 class="p-benefit__item-title">reason 01</h3>
-							<div class="p-benefit__item-img">
-								<img src="./assets/img/p-benefit__item-1.png" alt="椅子" width="337" height="336" />
-							</div>
-							<p class="p-benefit__item-text">
-								交換・返却費が無料で「今」最適な空間を選べる
-							</p>
-						</div>
-						<!-- p-benefit__item -->
-						<!-- p-benefit__item -->
-						<div class="p-benefit__item fade1">
-							<h3 class="p-benefit__item-title">reason 02</h3>
-							<div class="p-benefit__item-img">
-								<img src="./assets/img/p-benefit__item-2.png" alt="椅子に座る人" width="336" height="337" />
-							</div>
-							<p class="p-benefit__item-text">
-								初期コスト抑え、気軽に質の良い空間を手に入れられる
-							</p>
-						</div>
-						<!-- p-benefit__item -->
-						<!-- p-benefit__item -->
-						<div class="p-benefit__item fade1">
-							<h3 class="p-benefit__item-title">reason 03</h3>
-							<div class="p-benefit__item-img">
-								<img src="./assets/img/p-benefit__item-3.png" alt="歩く人" width="336" height="337" />
-							</div>
-							<p class="p-benefit__item-text">
-								モノを持たずに引っ越しや模様替えを楽しめる
-							</p>
-						</div>
-						<!-- p-benefit__item -->
-						<!-- p-benefit__item -->
-						<div class="p-benefit__item fade1">
-							<h3 class="p-benefit__item-title">reason 04</h3>
-							<div class="p-benefit__item-img">
-								<img src="./assets/img/p-benefit__item-4.png" alt="地球" width="336" height="337" />
-							</div>
-							<p class="p-benefit__item-text">
-								モノをなるべく捨てない、環境に優しい暮らし
-							</p>
-						</div>
-						<!-- p-benefit__item -->
-						<!-- p-benefit__item -->
-						<div class="p-benefit__item fade1">
-							<h3 class="p-benefit__item-title">reason 05</h3>
-							<div class="p-benefit__item-img">
-								<img src="./assets/img/p-benefit__item-5.png" alt="椅子" width="336" height="337" />
-							</div>
-							<p class="p-benefit__item-text">
-								本当に好きなモノに<br />囲まれる<br />豊かな暮らし
-							</p>
-						</div>
-						<!-- p-benefit__item -->
-					</div>
-					<!-- p-benefit__contents -->
-				</div>
-				<!-- p-benefit__container -->
-			</div>
-			<!-- p-benefit__inner -->
-		</section>
-		<!-- p-benefit -->
+              <!-- p-solution__flex-wrapper -->
+              <div class="p-solution__flex-wrapper">
+                <!-- p-solution__item -->
+                <div class="p-solution__item jsfadeIn">
+                  <div class="p-solution__icon">
+                    <img
+                      src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_1_1089)'%3e%3cpath%20d='M16%2030.001C12.287%2030.001%208.72601%2028.526%206.1005%2025.9005C3.475%2023.275%202%2019.714%202%2016.001C2%2012.2879%203.475%208.72699%206.1005%206.10148C8.72601%203.47597%2012.287%202.00098%2016%202.00098C19.713%202.00098%2023.274%203.47597%2025.8995%206.10148C28.525%208.72699%2030%2012.2879%2030%2016.001C30%2019.714%2028.525%2023.275%2025.8995%2025.9005C23.274%2028.526%2019.713%2030.001%2016%2030.001ZM16%2032.001C20.2435%2032.001%2024.3131%2030.3153%2027.3137%2027.3147C30.3143%2024.3141%2032%2020.2444%2032%2016.001C32%2011.7575%2030.3143%207.68785%2027.3137%204.68727C24.3131%201.68669%2020.2435%200.000976563%2016%200.000976562C11.7565%200.000976563%207.68687%201.68669%204.68629%204.68727C1.68571%207.68785%200%2011.7575%200%2016.001C0%2020.2444%201.68571%2024.3141%204.68629%2027.3147C7.68687%2030.3153%2011.7565%2032.001%2016%2032.001Z'%20fill='%23609484'/%3e%3cpath%20d='M21.94%209.94099C21.9258%209.9548%2021.9124%209.96949%2021.9%209.98499L14.954%2018.835L10.768%2014.647C10.4837%2014.382%2010.1076%2014.2378%209.71896%2014.2446C9.33036%2014.2515%208.95959%2014.4089%208.68476%2014.6837C8.40994%2014.9586%208.25251%2015.3293%208.24566%2015.7179C8.2388%2016.1065%208.38305%2016.4826%208.64801%2016.767L13.94%2022.061C14.0826%2022.2033%2014.2523%2022.3154%2014.4392%2022.3907C14.626%2022.466%2014.8261%2022.5028%2015.0275%2022.4991C15.2289%2022.4954%2015.4275%2022.4511%2015.6114%2022.369C15.7953%2022.2868%2015.9608%2022.1685%2016.098%2022.021L24.082%2012.041C24.3539%2011.7556%2024.5025%2011.3748%2024.4958%2010.9807C24.4891%2010.5867%2024.3275%2010.2111%2024.0461%209.93518C23.7647%209.65927%2023.386%209.5052%2022.9919%209.50629C22.5978%209.50738%2022.2199%209.66353%2021.94%209.94099Z'%20fill='%23609484'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_1_1089'%3e%3crect%20width='32'%20height='32'%20fill='white'%20transform='translate(0%200.000976562)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"
+                      alt="check-icon"
+                      width="32"
+                      height="32"
+                      loading="lazy"
+                    />
+                  </div>
+                  <p class="p-solution__text">新しい商品が出たら買い換えたい</p>
+                </div>
+                <!-- p-solution__item -->
+                <!-- p-solution__item -->
+                <div class="p-solution__item jsfadeIn">
+                  <div class="p-solution__icon">
+                    <img
+                      src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_1_1089)'%3e%3cpath%20d='M16%2030.001C12.287%2030.001%208.72601%2028.526%206.1005%2025.9005C3.475%2023.275%202%2019.714%202%2016.001C2%2012.2879%203.475%208.72699%206.1005%206.10148C8.72601%203.47597%2012.287%202.00098%2016%202.00098C19.713%202.00098%2023.274%203.47597%2025.8995%206.10148C28.525%208.72699%2030%2012.2879%2030%2016.001C30%2019.714%2028.525%2023.275%2025.8995%2025.9005C23.274%2028.526%2019.713%2030.001%2016%2030.001ZM16%2032.001C20.2435%2032.001%2024.3131%2030.3153%2027.3137%2027.3147C30.3143%2024.3141%2032%2020.2444%2032%2016.001C32%2011.7575%2030.3143%207.68785%2027.3137%204.68727C24.3131%201.68669%2020.2435%200.000976563%2016%200.000976562C11.7565%200.000976563%207.68687%201.68669%204.68629%204.68727C1.68571%207.68785%200%2011.7575%200%2016.001C0%2020.2444%201.68571%2024.3141%204.68629%2027.3147C7.68687%2030.3153%2011.7565%2032.001%2016%2032.001Z'%20fill='%23609484'/%3e%3cpath%20d='M21.94%209.94099C21.9258%209.9548%2021.9124%209.96949%2021.9%209.98499L14.954%2018.835L10.768%2014.647C10.4837%2014.382%2010.1076%2014.2378%209.71896%2014.2446C9.33036%2014.2515%208.95959%2014.4089%208.68476%2014.6837C8.40994%2014.9586%208.25251%2015.3293%208.24566%2015.7179C8.2388%2016.1065%208.38305%2016.4826%208.64801%2016.767L13.94%2022.061C14.0826%2022.2033%2014.2523%2022.3154%2014.4392%2022.3907C14.626%2022.466%2014.8261%2022.5028%2015.0275%2022.4991C15.2289%2022.4954%2015.4275%2022.4511%2015.6114%2022.369C15.7953%2022.2868%2015.9608%2022.1685%2016.098%2022.021L24.082%2012.041C24.3539%2011.7556%2024.5025%2011.3748%2024.4958%2010.9807C24.4891%2010.5867%2024.3275%2010.2111%2024.0461%209.93518C23.7647%209.65927%2023.386%209.5052%2022.9919%209.50629C22.5978%209.50738%2022.2199%209.66353%2021.94%209.94099Z'%20fill='%23609484'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_1_1089'%3e%3crect%20width='32'%20height='32'%20fill='white'%20transform='translate(0%200.000976562)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"
+                      alt="check-icon"
+                      width="32"
+                      height="32"
+                      loading="lazy"
+                    />
+                  </div>
+                  <p class="p-solution__text">模様替えをもっと楽しみたい</p>
+                </div>
+                <!-- p-solution__item -->
+              </div>
+              <!-- p-solution__flex-wrapper -->
+              <!-- p-solution__item -->
+              <div class="p-solution__item jsfadeIn">
+                <div class="p-solution__icon">
+                  <img
+                    src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_1_1089)'%3e%3cpath%20d='M16%2030.001C12.287%2030.001%208.72601%2028.526%206.1005%2025.9005C3.475%2023.275%202%2019.714%202%2016.001C2%2012.2879%203.475%208.72699%206.1005%206.10148C8.72601%203.47597%2012.287%202.00098%2016%202.00098C19.713%202.00098%2023.274%203.47597%2025.8995%206.10148C28.525%208.72699%2030%2012.2879%2030%2016.001C30%2019.714%2028.525%2023.275%2025.8995%2025.9005C23.274%2028.526%2019.713%2030.001%2016%2030.001ZM16%2032.001C20.2435%2032.001%2024.3131%2030.3153%2027.3137%2027.3147C30.3143%2024.3141%2032%2020.2444%2032%2016.001C32%2011.7575%2030.3143%207.68785%2027.3137%204.68727C24.3131%201.68669%2020.2435%200.000976563%2016%200.000976562C11.7565%200.000976563%207.68687%201.68669%204.68629%204.68727C1.68571%207.68785%200%2011.7575%200%2016.001C0%2020.2444%201.68571%2024.3141%204.68629%2027.3147C7.68687%2030.3153%2011.7565%2032.001%2016%2032.001Z'%20fill='%23609484'/%3e%3cpath%20d='M21.94%209.94099C21.9258%209.9548%2021.9124%209.96949%2021.9%209.98499L14.954%2018.835L10.768%2014.647C10.4837%2014.382%2010.1076%2014.2378%209.71896%2014.2446C9.33036%2014.2515%208.95959%2014.4089%208.68476%2014.6837C8.40994%2014.9586%208.25251%2015.3293%208.24566%2015.7179C8.2388%2016.1065%208.38305%2016.4826%208.64801%2016.767L13.94%2022.061C14.0826%2022.2033%2014.2523%2022.3154%2014.4392%2022.3907C14.626%2022.466%2014.8261%2022.5028%2015.0275%2022.4991C15.2289%2022.4954%2015.4275%2022.4511%2015.6114%2022.369C15.7953%2022.2868%2015.9608%2022.1685%2016.098%2022.021L24.082%2012.041C24.3539%2011.7556%2024.5025%2011.3748%2024.4958%2010.9807C24.4891%2010.5867%2024.3275%2010.2111%2024.0461%209.93518C23.7647%209.65927%2023.386%209.5052%2022.9919%209.50629C22.5978%209.50738%2022.2199%209.66353%2021.94%209.94099Z'%20fill='%23609484'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_1_1089'%3e%3crect%20width='32'%20height='32'%20fill='white'%20transform='translate(0%200.000976562)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"
+                    alt="check-icon"
+                    width="32"
+                    height="32"
+                    loading="lazy"
+                  />
+                </div>
+                <p class="p-solution__text">
+                  モノを捨てない、環境に優しい暮らしを楽しみながらしたい
+                </p>
+              </div>
+              <!-- p-solution__item -->
+            </div>
+            <!-- p-solution__contents -->
+          </div>
+        </div>
+      </section>
+      <!-- p-solution -->
 
-		<!-- p-authority -->
-		<section class="p-authority fade1">
-			<div class="p-authority__inner">
-				<div class="p-authority__contents">
-					<p class="p-authority__text">
-						おかげさまで<br class="u-hidden-pc" />Rich-Life USER 総会員数
-					</p>
-					<h3 class="p-authority__emphasis">16万人突破!</h3>
-				</div>
-			</div>
-		</section>
-		<!-- p-authority -->
+      <!-- p-realization-deco -->
+      <div class="p-realization-deco l-realization-deco jsfadeIn">
+        <div class="p-realization-deco__inner">
+          <p class="p-realization-deco__contents">
+            Rich-Lifeの家具・家電レンタルサービスはそんな理想の暮らしをご提供いたします。
+          </p>
+        </div>
+      </div>
+      <!-- p-realization-deco -->
 
-		<!-- p-voice -->
-		<section class="p-voice l-voice fade1">
-			<div class="p-voice__inner l-inner">
-				<div class="p-voice__container">
-					<div class="c-section-title">
-						<h2 class="c-section-title__jp">利用者さまの声</h2>
-						<p class="c-section-title__en">VOICE</p>
-					</div>
+      <!-- p-realization -->
+      <section class="p-realization p-realization--01 jsfadeIn">
+        <div class="p-realization__inner--01 l-inner">
+          <!-- p-realization__container -->
+          <div class="p-realization__container">
+            <div class="c-section-title">
+              <h2 class="c-section-title__jp">
+                Rich-Lifeで叶える、<br class="u-hidden-pc" />理想の暮らし紹介
+              </h2>
+              <p class="c-section-title__en">REALIZATION</p>
+            </div>
 
-					<!-- p-voice__contents -->
-					<div class="p-voice__contents">
-						<!-- p-voice__item -->
-						<div class="p-voice__item fade1">
-							<div class="p-voice__item-img">
-								<img src="./assets/img/review1.png" alt="review01" />
-								<div class="p-voice__item-img-ribbon">REVIEW 01</div>
-							</div>
-							<div class="p-voice__text-block">
-								<div class="p-voice__item-copy">
-									<p class="p-voice__copy-text">センスのいい家具で</p>
-									<p class="p-voice__copy-text">ワンランク上のお部屋に</p>
-								</div>
-								<p class="p-voice__text">
-									必要なときにだけ借りることができるコンセプトに魅力を感じて利用。<br />
-									レンタルできる家具はどれもセンスが良いので、ハズレがありません。そしてRich-Lifeの家具をお迎えしたことで、いつものおうち空間がワンランク上の部屋になって本当にうれしいです。<br />
-									今ではシーズンごとに家具のテイストを変えるのが楽しみになっています。
-								</p>
-								<p class="p-voice__reviewer">20代女性・XXXX子さん</p>
-							</div>
-						</div>
-						<!-- p-voice__item -->
-						<!-- p-voice__item -->
-						<div class="p-voice__item fade1">
-							<div class="p-voice__item-img">
-								<img src="./assets/img/review2.png" alt="review02" />
-								<div class="p-voice__item-img-ribbon">REVIEW 02</div>
-							</div>
-							<div class="p-voice__text-block">
-								<div class="p-voice__item-copy">
-									<p class="p-voice__copy-text">家具家電を汚した時の</p>
-									<p class="p-voice__copy-text">レンタル保証がうれしい。</p>
-								</div>
-								<p class="p-voice__text">
-									家具のレンタルに興味はあったものの、小さい子どもがいるので家具・家電を汚してしまった時のことが心配でなかなか踏み切れずにいました。ですがRich-Lifeは家具を汚したときの保証があるので安心して利用できています。以前子供がソファーに飲み物をこぼしてしまったのですが無料で交換してくれてとても助かりました。
-								</p>
-								<p class="p-voice__reviewer">30代女性・XXXX子さん</p>
-							</div>
-						</div>
-						<!-- p-voice__item -->
-						<!-- p-voice__item -->
-						<div class="p-voice__item fade1">
-							<div class="p-voice__item-img">
-								<img src="./assets/img/review3.png" alt="review03" />
-								<div class="p-voice__item-img-ribbon">REVIEW 03</div>
-							</div>
-							<div class="p-voice__text-block">
-								<div class="p-voice__item-copy">
-									<p class="p-voice__copy-text">本当に好きなモノに囲まれる</p>
-									<p class="p-voice__copy-text">豊かな暮らしを。</p>
-								</div>
-								<p class="p-voice__text">
-									子どもが巣立ち、これからは必要最小限でかつ品質の良いお気に入りのモノたちに囲まれた生活をしたいと思っていました。でもいきなり購入するのは気が引ける、と思っていたところこちらのサービスを見つけました。月額440円〜利用できますので色々試しながらこれからの自分たちに合った家具・家電を探しています。
-								</p>
-								<p class="p-voice__reviewer">50代女性・XXXX子さん</p>
-							</div>
-						</div>
-						<!-- p-voice__item -->
-					</div>
-					<!-- p-voice__contents -->
-				</div>
-			</div>
-		</section>
-		<!-- p-voice -->
+            <!-- p-realization-scene -->
+            <div class="p-realization-scene p-realization-scene--01 jsfadeIn">
+              <div class="p-realization-scene__img">
+                <p class="p-realization-scene__tag">SCENE 01</p>
+                <img
+                  src="./assets/webp/p-realization-scene01.webp"
+                  alt="scene01"
+                  width="686"
+                  height="277"
+                  loading="lazy"
+                />
+              </div>
 
-		<!-- p-solution -->
-		<section class="p-solution fade1">
-			<div class="p-solution__inner l-inner">
-				<div class="p-solution__container">
-					<div class="c-section-title">
-						<h2 class="c-section-title__jp">
-							こんなことでお悩みではないですか？
-						</h2>
-						<p class="c-section-title__en">SOLUTION</p>
-					</div>
+              <div class="p-realization-scene__description jsfadeIn">
+                <div class="p-realization-scene__content">
+                  <div class="p-realization-scene__title">
+                    <p class="u-hidden-pc">「スキ」なものを</p>
+                    <p class="u-hidden-pc">際立たせた空間作りを。</p>
+                    <p class="u-hidden-sp">
+                      「スキ」なものを際立たせた空間作りを。
+                    </p>
+                  </div>
+                  <!-- p-realization-scene__container -->
+                  <div class="p-realization-scene__container">
+                    <h3 class="p-realization-scene__sub-title">STYLE POINT</h3>
+                    <p class="p-realization-scene__text">
+                      ソファの足元にオットマンを配置すれば、カウチスタイルの出来上がり。<br />
+                      アームレスの特徴を活かして左右どちらにでも足を降ろしやすいので、楽な姿勢を見つけてみて。
+                    </p>
+                    <img
+                      src="./assets/webp/p-realization-item-man-sp.webp"
+                      alt="ソファでくつろぐ男性"
+                      class="p-realization-scene__img u-hidden-to-xl"
+                      width="622"
+                      height="353"
+                      loading="lazy"
+                    />
+                  </div>
+                  <!-- p-realization-scene__container -->
 
-					<!-- p-solution__contents -->
-					<div class="p-solution__contents">
-						<!-- p-solution__item -->
-						<div class="p-solution__item fade1">
-							<div class="p-solution__icon">
-								<img src="./assets/img/icon/p-solution-icon.svg" alt="check-icon" width="32" height="32" />
-							</div>
-							<p class="p-solution__text">
-								しっくりくる家具を選びたい。でもいきなり買うのは自信がない
-							</p>
-						</div>
-						<!-- p-solution__item -->
-						<!-- p-solution__item -->
-						<div class="p-solution__item fade1">
-							<div class="p-solution__icon">
-								<img src="./assets/img/icon/p-solution-icon.svg" alt="check-icon" width="32" height="32" />
-							</div>
-							<p class="p-solution__text">
-								引っ越しのたびに物を持っていることが大きな負担である。
-							</p>
-						</div>
-						<!-- p-solution__item -->
-						<!-- p-solution__item -->
-						<div class="p-solution__item fade1">
-							<div class="p-solution__icon">
-								<img src="./assets/img/icon/p-solution-icon.svg" alt="check-icon" width="32" height="32" />
-							</div>
-							<p class="p-solution__text">
-								きちんとした家具を使いたいけど、予算的に負担が大きい
-							</p>
-						</div>
-						<!-- p-solution__item -->
+                  <!-- p-realization-scene__container -->
+                  <div class="p-realization-scene__container">
+                    <h3 class="p-realization-scene__sub-title">
+                      ONE POINT ADVICE
+                    </h3>
+                    <p class="p-realization-scene__text">
+                      モバイルプロジェクターをサイドテーブルに置いて、足を伸ばした状態でゆったりと映画を楽むのはどうでしょう。Rich-Lifeではターンテーブルやスピーカーなどの音楽
+                      家電も取り扱っています。
+                    </p>
+                    <img
+                      src="./assets/webp/p-realization-item-projector-sp.webp"
+                      alt="プロジェクター"
+                      class="p-realization-scene__img u-hidden-to-xl"
+                      width="622"
+                      height="353"
+                      loading="lazy"
+                    />
+                  </div>
+                  <!-- p-realization-scene__container -->
+                </div>
+                <!-- p-realization-scene__content -->
+              </div>
+              <!-- p-realization-scene__description -->
+              <div class="p-realization-scene__bg-img u-hidden-sp">
+                <img
+                  src="./assets/webp/p-realization-item-man.webp"
+                  alt="ソファでくつろぐ男性"
+                  class="p-realization-scene__bg1 u-show-xl"
+                  width="567"
+                  height="733"
+                  loading="lazy"
+                />
+                <img
+                  src="./assets/webp/p-realization-item-projector.webp"
+                  alt="プロジェクター"
+                  class="p-realization-scene__bg2 u-show-xl"
+                  width="601"
+                  height="733"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <!-- p-realization-scene -->
+          </div>
+          <!-- p-realization__container -->
 
-						<!-- p-solution__flex-wrapper -->
-						<div class="p-solution__flex-wrapper">
-							<!-- p-solution__item -->
-							<div class="p-solution__item fade1">
-								<div class="p-solution__icon">
-									<img src="./assets/img/icon/p-solution-icon.svg" alt="check-icon" width="32" height="32" />
-								</div>
-								<p class="p-solution__text">新しい商品が出たら買い換えたい</p>
-							</div>
-							<!-- p-solution__item -->
-							<!-- p-solution__item -->
-							<div class="p-solution__item fade1">
-								<div class="p-solution__icon">
-									<img src="./assets/img/icon/p-solution-icon.svg" alt="check-icon" width="32" height="32" />
-								</div>
-								<p class="p-solution__text">模様替えをもっと楽しみたい</p>
-							</div>
-							<!-- p-solution__item -->
-						</div>
-						<!-- p-solution__flex-wrapper -->
-						<!-- p-solution__item -->
-						<div class="p-solution__item fade1">
-							<div class="p-solution__icon">
-								<img src="./assets/img/icon/p-solution-icon.svg" alt="check-icon" width="32" height="32" />
-							</div>
-							<p class="p-solution__text">
-								モノを捨てない、環境に優しい暮らしを楽しみながらしたい
-							</p>
-						</div>
-						<!-- p-solution__item -->
-					</div>
-					<!-- p-solution__contents -->
-				</div>
-			</div>
-		</section>
-		<!-- p-solution -->
+          <!-- p-realization-scene__lineup -->
+          <div class="p-realization-scene__lineup jsfadeIn">
+            <div class="p-realization-scene__lineup-inner">
+              <div class="p-realization-scene__lineup-title">
+                <h3>使用している家具・家電</h3>
+                <p class="p-realization-scene__lineup-title-en">LINE UP</p>
+              </div>
 
-		<!-- p-realization-deco -->
-		<div class="p-realization-deco l-realization-deco fade1">
-			<div class="p-realization-deco__inner">
-				<p class="p-realization-deco__contents">
-					Rich-Lifeの家具・家電レンタルサービスはそんな理想の暮らしをご提供いたします。
-				</p>
-			</div>
-		</div>
-		<!-- p-realization-deco -->
+              <!-- p-realization-scene__lineup-container -->
+              <div class="p-realization-scene__lineup-container">
+                <!-- p-realization-scene__lineup-card -->
+                <div class="p-realization-scene__lineup-card">
+                  <div class="p-realization-scene__lineup-card-img">
+                    <img
+                      src="./assets/webp/img_speaker.webp"
+                      alt="スピーカー"
+                      width="601"
+                      height="601"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="p-realization-scene__lineup-card-text-block">
+                    <p class="p-realization-scene__lineup-card-text-emphasize">
+                      House of Speaker
+                    </p>
+                    <p>Rich Black</p>
+                  </div>
+                </div>
+                <!-- p-realization-scene__lineup-card -->
+                <!-- p-realization-scene__lineup-card -->
+                <div class="p-realization-scene__lineup-card">
+                  <div class="p-realization-scene__lineup-card-img">
+                    <img
+                      src="./assets/webp/img_projector.webp"
+                      alt="プロジェクター"
+                      width="601"
+                      height="601"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="p-realization-scene__lineup-card-text-block">
+                    <p class="p-realization-scene__lineup-card-text-emphasize">
+                      Mobile Projector
+                    </p>
+                    <p>Silver</p>
+                  </div>
+                </div>
+                <!-- p-realization-scene__lineup-card -->
+                <!-- p-realization-scene__lineup-card -->
+                <div class="p-realization-scene__lineup-card">
+                  <div class="p-realization-scene__lineup-card-img">
+                    <img
+                      src="./assets/webp/img_roomsofa.webp"
+                      alt="ソファ"
+                      width="601"
+                      height="601"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="p-realization-scene__lineup-card-text-block">
+                    <p class="p-realization-scene__lineup-card-text-emphasize">
+                      Couch Sofa
+                    </p>
+                    <p>1P</p>
+                  </div>
+                </div>
+                <!-- p-realization-scene__lineup-card -->
+              </div>
+              <!-- p-realization-scene__lineup-container -->
+            </div>
+          </div>
+          <!-- p-realization-scene__lineup -->
+        </div>
+      </section>
+      <!-- p-realization -->
 
-		<!-- p-realization -->
-		<section class="p-realization p-realization--01 fade1">
-			<div class="p-realization__inner--01 l-inner">
-				<!-- p-realization__container -->
-				<div class="p-realization__container">
-					<div class="c-section-title">
-						<h2 class="c-section-title__jp">
-							Rich-Lifeで叶える、<br class="u-hidden-pc" />理想の暮らし紹介
-						</h2>
-						<p class="c-section-title__en">REALIZATION</p>
-					</div>
+      <!-- p-realization -->
+      <section class="p-realization p-realization--02 jsfadeIn">
+        <div class="p-realization__inner--02 l-inner">
+          <!-- p-realization__container -->
+          <div class="p-realization__container">
+            <!-- p-realization-scene -->
+            <div class="p-realization-scene p-realization-scene--02">
+              <div class="p-realization-scene__img">
+                <p class="p-realization-scene__tag">SCENE 02</p>
+                <img
+                  src="./assets/webp/p-realization-scene02.webp"
+                  alt="scene02"
+                  width="686"
+                  height="277"
+                  loading="lazy"
+                />
+              </div>
 
-					<!-- p-realization-scene -->
-					<div class="p-realization-scene p-realization-scene--01 fade1">
-						<div class="p-realization-scene__img">
-							<p class="p-realization-scene__tag">SCENE 01</p>
-							<img src="./assets/img/p-realization-scene01.png" alt="scene01" width="686" height="277" />
-						</div>
+              <div
+                class="p-realization-scene__description p-realization-scene__description--2"
+              >
+                <div class="p-realization-scene__content">
+                  <div class="p-realization-scene__title">
+                    <p class="u-hidden-pc">季節にあった彩りを</p>
+                    <p class="u-hidden-pc">手軽に楽しむ。</p>
+                    <p class="u-hidden-sp">季節にあった彩りを手軽に楽しむ。</p>
+                  </div>
+                  <!-- p-realization-scene__container -->
+                  <div class="p-realization-scene__container">
+                    <h4 class="p-realization-scene__sub-title">STYLE POINT</h4>
+                    <p class="p-realization-scene__text">
+                      ソファの上のクッションや壁面のフレーム、ソファ横の1人掛けの椅子などをベージュ〜ブラウンのアースカラーで統一。一方で碧編の白をワゴンの上に置くことで調和をとり、全体的に落ち着いた雰囲気に。
+                    </p>
+                    <img
+                      src="./assets/webp/p-realization-item-room-sp.webp"
+                      alt="部屋と観葉植物"
+                      class="p-realization-scene__img u-hidden-to-xl"
+                      width="622"
+                      height="353"
+                      loading="lazy"
+                    />
+                  </div>
+                  <!-- p-realization-scene__container -->
 
-						<div class="p-realization-scene__description fade1">
-							<div class="p-realization-scene__content fade1">
-								<div class="p-realization-scene__title">
-									<p class="u-hidden-pc">「スキ」なものを</p>
-									<p class="u-hidden-pc">際立たせた空間作りを。</p>
-									<p class="u-hidden-sp">
-										「スキ」なものを際立たせた空間作りを。
-									</p>
-								</div>
-								<!-- p-realization-scene__container -->
-								<div class="p-realization-scene__container fade1">
-									<h4 class="p-realization-scene__sub-title">STYLE POINT</h4>
-									<p class="p-realization-scene__text">
-										ソファの足元にオットマンを配置すれば、カウチスタイルの出来上がり。<br />
-										アームレスの特徴を活かして左右どちらにでも足を降ろしやすいので、楽な姿勢を見つけてみて。
-									</p>
-									<img src="./assets/img/p-realization-item-man-sp.png" alt="ソファでくつろぐ男性" class="p-realization-scene__img u-hidden-to-xl" width="622" height="353" />
-								</div>
-								<!-- p-realization-scene__container -->
+                  <!-- p-realization-scene__container -->
+                  <div class="p-realization-scene__container">
+                    <h4 class="p-realization-scene__sub-title">
+                      ONE POINT ADVICE
+                    </h4>
+                    <p class="p-realization-scene__text">
+                      お部屋のコーディネートをまとめるコツの一つとして、<br />
+                      同系色を散らして使うテクニックがあります。寒い冬の日でもどこかあたたかさと落ち着きを感じさせるベージュ〜ブラウンのアースカラーを試してみては？
+                    </p>
+                    <img
+                      src="./assets/webp/p-realization-item-sofa-sp.webp"
+                      alt="ソファ"
+                      class="p-realization-scene__img u-hidden-to-xl"
+                      width="622"
+                      height="353"
+                      loading="lazy"
+                    />
+                  </div>
+                  <!-- p-realization-scene__container -->
+                </div>
+                <!-- p-realization-scene__content -->
+              </div>
+              <!-- p-realization-scene__description -->
+              <div class="p-realization-scene__bg-img u-hidden-sp">
+                <img
+                  src="./assets/webp/p-realization-item-room.webp"
+                  alt="部屋と観葉植物"
+                  class="p-realization-scene__bg3 u-show-xl"
+                  width="568"
+                  height="733"
+                  loading="lazy"
+                />
+                <img
+                  src="./assets/webp/p-realization-item-sofa.webp"
+                  alt="ソファ"
+                  class="p-realization-scene__bg4 u-show-xl"
+                  width="598"
+                  height="731"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <!-- p-realization-scene -->
+          </div>
+          <!-- p-realization__container -->
 
-								<!-- p-realization-scene__container -->
-								<div class="p-realization-scene__container fade1">
-									<h4 class="p-realization-scene__sub-title">
-										ONE POINT ADVICE
-									</h4>
-									<p class="p-realization-scene__text">
-										モバイルプロジェクターをサイドテーブルに置いて、足を伸ばした状態でゆったりと映画を楽むのはどうでしょう。Rich-Lifeではターンテーブルやスピーカーなどの音楽
-										家電も取り扱っています。
-									</p>
-									<img src="./assets/img/p-realization-item-projector-sp.png" alt="プロジェクター" class="p-realization-scene__img u-hidden-to-xl" width="622" height="353" />
-								</div>
-								<!-- p-realization-scene__container -->
-							</div>
-							<!-- p-realization-scene__content -->
-						</div>
-						<!-- p-realization-scene__description -->
-						<div class="p-realization-scene__bg-img u-hidden-sp">
-							<img src="./assets/img/p-realization-item-man.png" alt="ソファでくつろぐ男性" class="p-realization-scene__bg1 u-show-xl fade1" />
-							<img src="./assets/img/p-realization-item-projector.png" alt="プロジェクター" class="p-realization-scene__bg2 u-show-xl fade1" />
-						</div>
-					</div>
-					<!-- p-realization-scene -->
-				</div>
-				<!-- p-realization__container -->
+          <!-- p-realization-scene__lineup -->
+          <div class="p-realization-scene__lineup jsfadeIn">
+            <div class="p-realization-scene__lineup-inner">
+              <div class="p-realization-scene__lineup-title">
+                <h3>使用している家具・家電</h3>
+                <p class="p-realization-scene__lineup-title-en">LINE UP</p>
+              </div>
 
-				<!-- p-realization-scene__lineup -->
-				<div class="p-realization-scene__lineup">
-					<div class="p-realization-scene__lineup-inner">
-						<div class="p-realization-scene__lineup-title">
-							<h3>使用している家具・家電</h3>
-							<p class="p-realization-scene__lineup-title-en">LINE UP</p>
-						</div>
+              <!-- p-realization-scene__lineup-container -->
+              <div class="p-realization-scene__lineup-container">
+                <!-- p-realization-scene__lineup-card -->
+                <div class="p-realization-scene__lineup-card">
+                  <div class="p-realization-scene__lineup-card-img">
+                    <img
+                      src="./assets/webp/img_sofa.webp"
+                      alt="ローソファ"
+                      width="600"
+                      height="601"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="p-realization-scene__lineup-card-text-block">
+                    <p class="p-realization-scene__lineup-card-text-emphasize">
+                      Low Sofa
+                    </p>
+                    <p>ローソファ</p>
+                  </div>
+                </div>
+                <!-- p-realization-scene__lineup-card -->
+                <!-- p-realization-scene__lineup-card -->
+                <div class="p-realization-scene__lineup-card">
+                  <div class="p-realization-scene__lineup-card-img">
+                    <img
+                      src="./assets/webp/img_table.webp"
+                      alt="ミニテーブル"
+                      width="600"
+                      height="601"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="p-realization-scene__lineup-card-text-block">
+                    <p class="p-realization-scene__lineup-card-text-emphasize">
+                      Mini Table
+                    </p>
+                    <p>直径45cm</p>
+                  </div>
+                </div>
+                <!-- p-realization-scene__lineup-card -->
+                <!-- p-realization-scene__lineup-card -->
+                <div class="p-realization-scene__lineup-card">
+                  <div class="p-realization-scene__lineup-card-img">
+                    <img
+                      src="./assets/webp/img_single-chair.webp"
+                      alt="一人掛けソファ"
+                      width="601"
+                      height="601"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="p-realization-scene__lineup-card-text-block">
+                    <p class="p-realization-scene__lineup-card-text-emphasize">
+                      Single Sofa
+                    </p>
+                    <p>一人掛けソファ</p>
+                  </div>
+                </div>
+                <!-- p-realization-scene__lineup-card -->
+              </div>
+              <!-- p-realization-scene__lineup-container -->
+            </div>
+          </div>
+          <!-- p-realization-scene__lineup -->
+        </div>
+      </section>
+      <!-- p-realization -->
 
-						<!-- p-realization-scene__lineup-container -->
-						<div class="p-realization-scene__lineup-container">
-							<!-- p-realization-scene__lineup-card -->
-							<div class="p-realization-scene__lineup-card fade1">
-								<div class="p-realization-scene__lineup-card-img">
-									<img src="./assets/img/img_speaker.png" alt="スピーカー" width="601" height="601" />
-								</div>
-								<div class="p-realization-scene__lineup-card-text-block">
-									<p class="p-realization-scene__lineup-card-text-emphasize">
-										House of Speaker
-									</p>
-									<p>Rich Black</p>
-								</div>
-							</div>
-							<!-- p-realization-scene__lineup-card -->
-							<!-- p-realization-scene__lineup-card -->
-							<div class="p-realization-scene__lineup-card fade1">
-								<div class="p-realization-scene__lineup-card-img">
-									<img src="./assets/img/img_projector.png" alt="プロジェクター" width="601" height="601" />
-								</div>
-								<div class="p-realization-scene__lineup-card-text-block">
-									<p class="p-realization-scene__lineup-card-text-emphasize">
-										Mobile Projector
-									</p>
-									<p>Silver</p>
-								</div>
-							</div>
-							<!-- p-realization-scene__lineup-card -->
-							<!-- p-realization-scene__lineup-card -->
-							<div class="p-realization-scene__lineup-card fade1">
-								<div class="p-realization-scene__lineup-card-img">
-									<img src="./assets/img/img_roomsofa.png" alt="ソファ" width="601" height="601" />
-								</div>
-								<div class="p-realization-scene__lineup-card-text-block">
-									<p class="p-realization-scene__lineup-card-text-emphasize">
-										Couch Sofa
-									</p>
-									<p>1P</p>
-								</div>
-							</div>
-							<!-- p-realization-scene__lineup-card -->
-						</div>
-						<!-- p-realization-scene__lineup-container -->
-					</div>
-				</div>
-				<!-- p-realization-scene__lineup -->
-			</div>
-		</section>
-		<!-- p-realization -->
+      <!-- p-cta -->
+      <section class="p-cta l-cta jsfadeIn">
+        <div class="p-cta__outer">
+          <!-- p-cta__inner -->
+          <div class="p-cta__inner l-inner">
+            <!-- p-cta__contents -->
+            <div class="p-cta__contents">
+              <!-- p-cta__text-block -->
+              <div class="p-cta__text-block">
+                <div class="p-cta__ribbon">今だけ</div>
+                <p class="p-cta__lead">高品質でセンスのいい家具・家電を</p>
+                <p class="p-cta__copy">
+                  10%0FF価格で<br class="u-hidden-pc" />レンタルできます。
+                </p>
+              </div>
+              <!-- p-cta__text-block -->
 
-		<!-- p-realization -->
-		<section class="p-realization p-realization--02 fade1">
-			<div class="p-realization__inner--02 l-inner">
-				<!-- p-realization__container -->
-				<div class="p-realization__container">
-					<!-- p-realization-scene -->
-					<div class="p-realization-scene p-realization-scene--02 fade1">
-						<div class="p-realization-scene__img">
-							<p class="p-realization-scene__tag">SCENE 02</p>
-							<img src="./assets/img/p-realization-scene02.png" alt="scene02" width="686" height="277" />
-						</div>
+              <!-- p-cta__merit-container -->
+              <div class="p-cta__merit-container">
+                <div class="c-merit-block">月額440円〜</div>
+                <div class="c-merit-block">1ヶ月〜レンタル可能</div>
+                <div class="c-merit-block">長期レンタル割引あり</div>
+              </div>
+              <!-- p-cta__merit-container -->
 
-						<div class="p-realization-scene__description p-realization-scene__description--2 fade1">
-							<div class="p-realization-scene__content fade1">
-								<div class="p-realization-scene__title">
-									<p class="u-hidden-pc">季節にあった彩りを</p>
-									<p class="u-hidden-pc">手軽に楽しむ。</p>
-									<p class="u-hidden-sp">季節にあった彩りを手軽に楽しむ。</p>
-								</div>
-								<!-- p-realization-scene__container -->
-								<div class="p-realization-scene__container fade1">
-									<h4 class="p-realization-scene__sub-title">STYLE POINT</h4>
-									<p class="p-realization-scene__text">
-										ソファの上のクッションや壁面のフレーム、ソファ横の1人掛けの椅子などをベージュ〜ブラウンのアースカラーで統一。一方で碧編の白をワゴンの上に置くことで調和をとり、全体的に落ち着いた雰囲気に。
-									</p>
-									<img src="./assets/img/p-realization-item-room-sp.png" alt="部屋と観葉植物" class="p-realization-scene__img u-hidden-to-xl" width="622" height="353" />
-								</div>
-								<!-- p-realization-scene__container -->
+              <!-- p-cta__btn-container -->
+              <div class="p-cta__btn-container">
+                <div class="c-btn-guide">カンタン！ 3 STEP</div>
+                <a href="/" class="c-btn c-btn--register">今すぐ会員登録</a>
+              </div>
+              <!-- p-cta__btn-container -->
+            </div>
+            <!-- p-cta__contents -->
+          </div>
+          <!-- p-cta__inner -->
+        </div>
+      </section>
+      <!-- p-cta -->
 
-								<!-- p-realization-scene__container -->
-								<div class="p-realization-scene__container fade1">
-									<h4 class="p-realization-scene__sub-title">
-										ONE POINT ADVICE
-									</h4>
-									<p class="p-realization-scene__text">
-										お部屋のコーディネートをまとめるコツの一つとして、<br />
-										同系色を散らして使うテクニックがあります。寒い冬の日でもどこかあたたかさと落ち着きを感じさせるベージュ〜ブラウンのアースカラーを試してみては？
-									</p>
-									<img src="./assets/img/p-realization-item-sofa-sp.png" alt="ソファ" class="p-realization-scene__img u-hidden-to-xl" width="622" height="353" />
-								</div>
-								<!-- p-realization-scene__container -->
-							</div>
-							<!-- p-realization-scene__content -->
-						</div>
-						<!-- p-realization-scene__description -->
-						<div class="p-realization-scene__bg-img u-hidden-sp">
-							<img src="./assets/img/p-realization-item-room.png" alt="部屋と観葉植物" class="p-realization-scene__bg3 u-show-xl fade1" />
-							<img src="./assets/img/p-realization-item-sofa.png" alt="ソファ" class="p-realization-scene__bg4 u-show-xl fade1" />
-						</div>
-					</div>
-					<!-- p-realization-scene -->
-				</div>
-				<!-- p-realization__container -->
+      <!-- p-features -->
+      <section class="p-features jsfadeIn">
+        <div class="p-features__inner l-inner">
+          <div class="p-features__container">
+            <div class="c-section-title">
+              <h2 class="c-section-title__jp">
+                Rich-Lifeが愛される<br class="u-hidden-pc" />4つのポイント
+              </h2>
+              <p class="c-section-title__en">FEATURES</p>
+            </div>
 
-				<!-- p-realization-scene__lineup -->
-				<div class="p-realization-scene__lineup">
-					<div class="p-realization-scene__lineup-inner">
-						<div class="p-realization-scene__lineup-title">
-							<h3>使用している家具・家電</h3>
-							<p class="p-realization-scene__lineup-title-en">LINE UP</p>
-						</div>
+            <!-- p-features__card-wrapper -->
+            <div class="p-features__card-wrapper">
+              <!-- c-features-card -->
+              <div class="c-features-card jsfadeIn">
+                <div class="c-features-card__img">
+                  <img
+                    src="./assets/webp/img_desk_chair.webp"
+                    alt="desk&chair"
+                    width="622"
+                    height="384"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="c-features-card__contents">
+                  <div class="c-features-card__tag">point 01</div>
+                  <h3 class="c-features-card__title">
+                    交換・返却が自由でカンタン
+                  </h3>
+                  <p class="c-features-card__text">
+                    自分の生活に最適なものを使うために時間や労力をかけて選んだにも関わらず、「思っていたのと違う」と後悔した経験はありませんか？Rich-Lifeでは家具・家電のレンタルができますので取捨選択にかける時間を大幅にカットできます。また実際に使用してみて、自分に合わないと思ったらすぐに交換・返却ができるので、手軽さゆえの心の余裕が生まれるのもポイント。
+                  </p>
+                </div>
+              </div>
+              <!-- c-features-card -->
 
-						<!-- p-realization-scene__lineup-container -->
-						<div class="p-realization-scene__lineup-container">
-							<!-- p-realization-scene__lineup-card -->
-							<div class="p-realization-scene__lineup-card fade1">
-								<div class="p-realization-scene__lineup-card-img">
-									<img src="./assets/img/img_sofa.png" alt="ローソファ" width="601" height="601" />
-								</div>
-								<div class="p-realization-scene__lineup-card-text-block">
-									<p class="p-realization-scene__lineup-card-text-emphasize">
-										Low Sofa
-									</p>
-									<p>ローソファ</p>
-								</div>
-							</div>
-							<!-- p-realization-scene__lineup-card -->
-							<!-- p-realization-scene__lineup-card -->
-							<div class="p-realization-scene__lineup-card fade1">
-								<div class="p-realization-scene__lineup-card-img">
-									<img src="./assets/img/img_table.png" alt="ミニテーブル" width="601" height="601" />
-								</div>
-								<div class="p-realization-scene__lineup-card-text-block">
-									<p class="p-realization-scene__lineup-card-text-emphasize">
-										Mini Table
-									</p>
-									<p>直径45cm</p>
-								</div>
-							</div>
-							<!-- p-realization-scene__lineup-card -->
-							<!-- p-realization-scene__lineup-card -->
-							<div class="p-realization-scene__lineup-card fade1">
-								<div class="p-realization-scene__lineup-card-img">
-									<img src="./assets/img/img_single-chair.png" alt="一人掛けソファ" width="601" height="601" />
-								</div>
-								<div class="p-realization-scene__lineup-card-text-block">
-									<p class="p-realization-scene__lineup-card-text-emphasize">
-										Single Sofa
-									</p>
-									<p>一人掛けソファ</p>
-								</div>
-							</div>
-							<!-- p-realization-scene__lineup-card -->
-						</div>
-						<!-- p-realization-scene__lineup-container -->
-					</div>
-				</div>
-				<!-- p-realization-scene__lineup -->
-			</div>
-		</section>
-		<!-- p-realization -->
+              <!-- c-features-card -->
+              <div class="c-features-card jsfadeIn">
+                <div class="c-features-card__img">
+                  <img
+                    src="./assets/webp/img_subscription.webp"
+                    alt="subscription"
+                    width="622"
+                    height="384"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="c-features-card__contents">
+                  <div class="c-features-card__tag">point 02</div>
+                  <h3 class="c-features-card__title">
+                    月額定額制で返却期限なし
+                  </h3>
+                  <p class="c-features-card__text">
+                    1ヶ月という短期間からのレンタルが可能ですので、自分により合う家具・家電を色々試せる手軽さが最大の特徴。また、月額定額制なので費用管理がしやすいのもポイント。
+                  </p>
+                </div>
+              </div>
+              <!-- c-features-card -->
 
-		<!-- p-cta -->
-		<section class="p-cta l-cta fade1">
-			<div class="p-cta__outer">
-				<!-- p-cta__inner -->
-				<div class="p-cta__inner l-inner">
-					<!-- p-cta__contents -->
-					<div class="p-cta__contents">
-						<!-- p-cta__text-block -->
-						<div class="p-cta__text-block fade1">
-							<div class="p-cta__ribbon">今だけ</div>
-							<p class="p-cta__lead">高品質でセンスのいい家具・家電を</p>
-							<p class="p-cta__copy">
-								10%0FF価格で<br class="u-hidden-pc" />レンタルできます。
-							</p>
-						</div>
-						<!-- p-cta__text-block -->
+              <!-- c-features-card -->
+              <div class="c-features-card jsfadeIn">
+                <div class="c-features-card__img">
+                  <img
+                    src="./assets/webp/img_desk_chair.webp"
+                    alt="desk&chair"
+                    width="622"
+                    height="384"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="c-features-card__contents">
+                  <div class="c-features-card__tag">point 03</div>
+                  <h3 class="c-features-card__title">
+                    きちんとした品質でセンスのいいものだけをセレクト
+                  </h3>
+                  <p class="c-features-card__text">
+                    きちんとしたモノは自分の生活の質を向上させてくれます。生活の質は心の余裕にも繋がりますので、それが自然と自分の気持ちをも高めてくれる好循環が生まれます。またきちんとした品質でかつセンスのいいものだけを取り揃えておりますので家具・家電の善し悪しが分からないという人でも失敗が少ないのも嬉しいポイントです。
+                  </p>
+                </div>
+              </div>
+              <!-- c-features-card -->
 
-						<!-- p-cta__merit-container -->
-						<div class="p-cta__merit-container fade2">
-							<div class="c-merit-block">月額440円〜</div>
-							<div class="c-merit-block">1ヶ月〜レンタル可能</div>
-							<div class="c-merit-block">長期レンタル割引あり</div>
-						</div>
-						<!-- p-cta__merit-container -->
+              <!-- c-features-card -->
+              <div class="c-features-card jsfadeIn">
+                <div class="c-features-card__img">
+                  <img
+                    src="./assets/webp/img_family.webp"
+                    alt="family"
+                    width="622"
+                    height="384"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="c-features-card__contents">
+                  <div class="c-features-card__tag">point 04</div>
+                  <h3 class="c-features-card__title">
+                    ライフステージの変化に対応
+                  </h3>
+                  <p class="c-features-card__text">
+                    年齢が上がるにつれてライフステージは変遷していくもの。それと同時に、そのときの暮らしにあった家具・家電のスペックが変わりますので、購入するとなると生活スタイルが変わるたびに家具・家電の入れ替えを迫られるなんてことも。でもRich-Lifeはレンタル品なので、先の心配をすることなく「今の自分に必要なモノだけ」を置いておける気楽さを手に入れられます。また、まだまだ使えるモノを廃棄するという手間や罪悪感をも払拭してくれます。
+                  </p>
+                </div>
+              </div>
+              <!-- c-features-card -->
+            </div>
+            <!-- p-features__card-wrapper -->
+          </div>
+        </div>
+      </section>
+      <!-- p-features -->
 
-						<!-- p-cta__btn-container -->
-						<div class="p-cta__btn-container fade2">
-							<div class="c-btn-guide">カンタン！ 3 STEP</div>
-							<a href="#" class="c-btn c-btn--register">今すぐ会員登録</a>
-						</div>
-						<!-- p-cta__btn-container -->
-					</div>
-					<!-- p-cta__contents -->
-				</div>
-				<!-- p-cta__inner -->
-			</div>
-		</section>
-		<!-- p-cta -->
+      <!-- p-how-to -->
+      <section class="p-how-to jsfadeIn">
+        <div class="p-how-to__inner l-inner">
+          <div class="p-how-to__container">
+            <div class="c-section-title">
+              <h2 class="c-section-title__jp">
+                気軽に簡単に<br class="u-hidden-pc" />
+                Rich-Lifeの使い方
+              </h2>
+              <p class="c-section-title__en">HOW TO USE</p>
+            </div>
 
-		<!-- p-features -->
-		<section class="p-features fade1">
-			<div class="p-features__inner l-inner">
-				<div class="p-features__container">
-					<div class="c-section-title">
-						<h2 class="c-section-title__jp">
-							Rich-Lifeが愛される<br class="u-hidden-pc" />4つのポイント
-						</h2>
-						<p class="c-section-title__en">FEATURES</p>
-					</div>
+            <div class="p-how-to__card-wrapper">
+              <!-- c-how-to-card -->
+              <div class="c-how-to-card jsfadeIn">
+                <div class="c-how-to-card__img">
+                  <img
+                    src="./assets/webp/img_search.webp"
+                    alt="ネットで注文"
+                    width="536"
+                    height="537"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="c-how-to-card__contents">
+                  <div class="c-how-to-card__heading">
+                    <div class="c-how-to-card__title-no">01</div>
+                    <h3 class="c-how-to-card__title">ネットで注文</h3>
+                  </div>
+                  <p class="c-how-to-card__text">
+                    スマホやパソコンから、商品と配送希望日を選んで、注文
+                  </p>
+                </div>
+              </div>
+              <!-- c-how-to-card -->
+              <!-- c-how-to-card -->
+              <div class="c-how-to-card jsfadeIn">
+                <div class="c-how-to-card__img">
+                  <img
+                    src="./assets/webp/img_moving.webp"
+                    alt="配送・設置"
+                    width="536"
+                    height="537"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="c-how-to-card__contents">
+                  <div class="c-how-to-card__heading">
+                    <div class="c-how-to-card__title-no">02</div>
+                    <h3 class="c-how-to-card__title">配送・設置</h3>
+                  </div>
+                  <p class="c-how-to-card__text">
+                    専門業者がご自宅までお届け 商品の搬入は全ておまかせ
+                  </p>
+                </div>
+              </div>
+              <!-- c-how-to-card -->
+              <!-- c-how-to-card -->
+              <div class="c-how-to-card jsfadeIn">
+                <div class="c-how-to-card__img">
+                  <img
+                    src="./assets/webp/img_chair.webp"
+                    alt="chair"
+                    width="536"
+                    height="537"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="c-how-to-card__contents">
+                  <div class="c-how-to-card__heading">
+                    <div class="c-how-to-card__title-no">03</div>
+                    <h3 class="c-how-to-card__title">ご利用</h3>
+                  </div>
+                  <p class="c-how-to-card__text">
+                    購入した商品と同じように普段の生活でご利用いただけます
+                  </p>
+                </div>
+              </div>
+              <!-- c-how-to-card -->
+              <!-- c-how-to-card -->
+              <div class="c-how-to-card jsfadeIn">
+                <div class="c-how-to-card__img">
+                  <img
+                    src="./assets/webp/img_room.webp"
+                    alt="room"
+                    width="536"
+                    height="537"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="c-how-to-card__contents">
+                  <div class="c-how-to-card__heading">
+                    <div class="c-how-to-card__title-no">04</div>
+                    <h3 class="c-how-to-card__title">交換・返送</h3>
+                  </div>
+                  <p class="c-how-to-card__text">
+                    交換や返却の際も、搬出は専門業者に全ておまかせ
+                    ※一部地域を除く
+                  </p>
+                </div>
+              </div>
+              <!-- c-how-to-card -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- p-how-to -->
 
-					<!-- p-features__card-wrapper -->
-					<div class="p-features__card-wrapper">
-						<!-- c-features-card -->
-						<div class="c-features-card fade1">
-							<div class="c-features-card__img">
-								<img src="./assets/img/img_desk&chair.png" alt="desk&chair" width="622" height="384" />
-							</div>
-							<div class="c-features-card__contents">
-								<div class="c-features-card__tag">point 01</div>
-								<h3 class="c-features-card__title">
-									交換・返却が自由でカンタン
-								</h3>
-								<p class="c-features-card__text">
-									自分の生活に最適なものを使うために時間や労力をかけて選んだにも関わらず、「思っていたのと違う」と後悔した経験はありませんか？Rich-Lifeでは家具・家電のレンタルができますので取捨選択にかける時間を大幅にカットできます。また実際に使用してみて、自分に合わないと思ったらすぐに交換・返却ができるので、手軽さゆえの心の余裕が生まれるのもポイント。
-								</p>
-							</div>
-						</div>
-						<!-- c-features-card -->
+      <!-- p-cta -->
+      <section class="p-cta l-cta jsfadeIn">
+        <div class="p-cta__outer">
+          <!-- p-cta__inner -->
+          <div class="p-cta__inner l-inner">
+            <!-- p-cta__contents -->
+            <div class="p-cta__contents">
+              <!-- p-cta__text-block -->
+              <div class="p-cta__text-block">
+                <div class="p-cta__ribbon">今だけ</div>
+                <p class="p-cta__lead">高品質でセンスのいい家具・家電を</p>
+                <p class="p-cta__copy">
+                  10%0FF価格で<br class="u-hidden-pc" />レンタルできます。
+                </p>
+              </div>
+              <!-- p-cta__text-block -->
 
-						<!-- c-features-card -->
-						<div class="c-features-card fade1">
-							<div class="c-features-card__img">
-								<img src="./assets/img/img_subscription.png" alt="subscription" width="622" height="384" />
-							</div>
-							<div class="c-features-card__contents">
-								<div class="c-features-card__tag">point 02</div>
-								<h3 class="c-features-card__title">
-									月額定額制で返却期限なし
-								</h3>
-								<p class="c-features-card__text">
-									1ヶ月という短期間からのレンタルが可能ですので、自分により合う家具・家電を色々試せる手軽さが最大の特徴。また、月額定額制なので費用管理がしやすいのもポイント。
-								</p>
-							</div>
-						</div>
-						<!-- c-features-card -->
+              <!-- p-cta__merit-container -->
+              <div class="p-cta__merit-container">
+                <div class="c-merit-block">月額440円〜</div>
+                <div class="c-merit-block">1ヶ月〜レンタル可能</div>
+                <div class="c-merit-block">長期レンタル割引あり</div>
+              </div>
+              <!-- p-cta__merit-container -->
 
-						<!-- c-features-card -->
-						<div class="c-features-card fade1">
-							<div class="c-features-card__img">
-								<img src="./assets/img/img_desk&chair.png" alt="desk&chair" width="622" height="384" />
-							</div>
-							<div class="c-features-card__contents">
-								<div class="c-features-card__tag">point 03</div>
-								<h3 class="c-features-card__title">
-									きちんとした品質でセンスのいいものだけをセレクト
-								</h3>
-								<p class="c-features-card__text">
-									きちんとしたモノは自分の生活の質を向上させてくれます。生活の質は心の余裕にも繋がりますので、それが自然と自分の気持ちをも高めてくれる好循環が生まれます。またきちんとした品質でかつセンスのいいものだけを取り揃えておりますので家具・家電の善し悪しが分からないという人でも失敗が少ないのも嬉しいポイントです。
-								</p>
-							</div>
-						</div>
-						<!-- c-features-card -->
+              <!-- p-cta__btn-container -->
+              <div class="p-cta__btn-container">
+                <div class="c-btn-guide">カンタン！ 3 STEP</div>
+                <a href="/" class="c-btn c-btn--register">今すぐ会員登録</a>
+              </div>
+              <!-- p-cta__btn-container -->
+            </div>
+            <!-- p-cta__contents -->
+          </div>
+          <!-- p-cta__inner -->
+        </div>
+      </section>
+      <!-- p-cta -->
 
-						<!-- c-features-card -->
-						<div class="c-features-card fade1">
-							<div class="c-features-card__img">
-								<img src="./assets/img/img_family.png" alt="family" width="622" height="384" />
-							</div>
-							<div class="c-features-card__contents">
-								<div class="c-features-card__tag">point 04</div>
-								<h3 class="c-features-card__title">
-									ライフステージの変化に対応
-								</h3>
-								<p class="c-features-card__text">
-									年齢が上がるにつれてライフステージは変遷していくもの。それと同時に、そのときの暮らしにあった家具・家電のスペックが変わりますので、購入するとなると生活スタイルが変わるたびに家具・家電の入れ替えを迫られるなんてことも。でもRich-Lifeはレンタル品なので、先の心配をすることなく「今の自分に必要なモノだけ」を置いておける気楽さを手に入れられます。また、まだまだ使えるモノを廃棄するという手間や罪悪感をも払拭してくれます。
-								</p>
-							</div>
-						</div>
-						<!-- c-features-card -->
-					</div>
-					<!-- p-features__card-wrapper -->
-				</div>
-			</div>
-		</section>
-		<!-- p-features -->
+      <!-- p-faq -->
+      <section class="p-faq jsfadeIn">
+        <div class="p-faq__inner l-inner">
+          <div class="p-faq__container">
+            <div class="c-section-title">
+              <h2 class="c-section-title__jp">よくある質問</h2>
+              <p class="c-section-title__en">FAQ</p>
+            </div>
 
-		<!-- p-how-to -->
-		<section class="p-how-to fade1">
-			<div class="p-how-to__inner l-inner">
-				<div class="p-how-to__container">
-					<div class="c-section-title">
-						<h2 class="c-section-title__jp">
-							気軽に簡単に<br class="u-hidden-pc" />
-							Rich-Lifeの使い方
-						</h2>
-						<p class="c-section-title__en">HOW TO USE</p>
-					</div>
+            <!-- p-faq__wrapper -->
+            <div class="p-faq__wrapper">
+              <!-- p-faq_qa-box -->
+              <details class="p-faq__qa-box jsfadeIn">
+                <summary class="p-faq__body">
+                  <span class="p-faq_icon">Q</span>
+                  <p>Rich-Lifeはどんなサービスですか？</p>
+                </summary>
+                <div class="p-faq__body p-faq__body--a">
+                  <div class="p-faq_icon p-faq_icon--a">A</div>
+                  <p>
+                    Rich-lifeは必要なときに必要なものだけを使える家具・家電のレンタルサービスです。
+                  </p>
+                </div>
+              </details>
+              <!-- p-faq_qa-box -->
+              <!-- p-faq_qa-box -->
+              <details class="p-faq__qa-box jsfadeIn">
+                <summary class="p-faq__body">
+                  <span class="p-faq_icon">Q</span>
+                  <p>レンタル期間は選べますか？</p>
+                </summary>
+                <div class="p-faq__body p-faq__body--a">
+                  <div class="p-faq_icon p-faq_icon--a">A</div>
+                  <p>
+                    レンタル期間は1ヶ月からです。更新手続きは毎月自動で行いますので更新手続きは不要です。
+                  </p>
+                </div>
+              </details>
+              <!-- p-faq_qa-box -->
+              <!-- p-faq_qa-box -->
+              <details class="p-faq__qa-box jsfadeIn">
+                <summary class="p-faq__body">
+                  <span class="p-faq_icon">Q</span>
+                  <p>注文してから届くまでどのくらい期間がかかりますか？</p>
+                </summary>
+                <div class="p-faq__body p-faq__body--a">
+                  <div class="p-faq_icon p-faq_icon--a">A</div>
+                  <p>
+                    商品とお住まいの地域によりますが、約1週間ほどでお届けいたします。
+                  </p>
+                </div>
+              </details>
+              <!-- p-faq_qa-box -->
+              <!-- p-faq_qa-box -->
+              <details class="p-faq__qa-box jsfadeIn">
+                <summary class="p-faq__body">
+                  <span class="p-faq_icon">Q</span>
+                  <p>商品の交換は可能ですか？</p>
+                </summary>
+                <div class="p-faq__body p-faq__body--a">
+                  <div class="p-faq_icon p-faq_icon--a">A</div>
+                  <p>
+                    可能でございます。マイページより交換申請手続きをお願いいたします。
+                  </p>
+                </div>
+              </details>
+              <!-- p-faq_qa-box -->
+              <!-- p-faq_qa-box -->
+              <details class="p-faq__qa-box p-faq__qa-box--mts jsfadeIn">
+                <summary class="p-faq__body">
+                  <span class="p-faq_icon">Q</span>
+                  <p>申込の仕方を教えてください。</p>
+                </summary>
+                <div class="p-faq__body p-faq__body--a">
+                  <div class="p-faq_icon p-faq_icon--a">A</div>
+                  <p>
+                    1.ご希望の商品を選択し、カートへ入れてください。<br />
+                    2.右上のカートボタンを押し、お届け先と支払い情報の登録をお願いいたします。<br />
+                    3.配送日を選択し、注文確定ボタンを押していただけましたら注文完了となります。<br />
+                  </p>
+                </div>
+              </details>
+              <!-- p-faq_qa-box -->
+            </div>
+            <!-- p-faq__wrapper -->
 
-					<div class="p-how-to__card-wrapper">
-						<!-- c-how-to-card -->
-						<div class="c-how-to-card fade1">
-							<div class="c-how-to-card__img">
-								<img src="./assets/img/img_search.png" alt="ネットで注文" width="536" height="537" />
-							</div>
-							<div class="c-how-to-card__contents">
-								<div class="c-how-to-card__heading">
-									<div class="c-how-to-card__title-no">01</div>
-									<h3 class="c-how-to-card__title">ネットで注文</h3>
-								</div>
-								<p class="c-how-to-card__text">
-									スマホやパソコンから、商品と配送希望日を選んで、注文
-								</p>
-							</div>
-						</div>
-						<!-- c-how-to-card -->
-						<!-- c-how-to-card -->
-						<div class="c-how-to-card fade1">
-							<div class="c-how-to-card__img">
-								<img src="./assets/img/img_moving.png" alt="配送・設置" width="536" height="537" />
-							</div>
-							<div class="c-how-to-card__contents">
-								<div class="c-how-to-card__heading">
-									<div class="c-how-to-card__title-no">02</div>
-									<h3 class="c-how-to-card__title">配送・設置</h3>
-								</div>
-								<p class="c-how-to-card__text">
-									専門業者がご自宅までお届け 商品の搬入は全ておまかせ
-								</p>
-							</div>
-						</div>
-						<!-- c-how-to-card -->
-						<!-- c-how-to-card -->
-						<div class="c-how-to-card fade1">
-							<div class="c-how-to-card__img">
-								<img src="./assets/img/img_chair.png" alt="chair" width="536" height="537" />
-							</div>
-							<div class="c-how-to-card__contents">
-								<div class="c-how-to-card__heading">
-									<div class="c-how-to-card__title-no">03</div>
-									<h3 class="c-how-to-card__title">ご利用</h3>
-								</div>
-								<p class="c-how-to-card__text">
-									購入した商品と同じように普段の生活でご利用いただけます
-								</p>
-							</div>
-						</div>
-						<!-- c-how-to-card -->
-						<!-- c-how-to-card -->
-						<div class="c-how-to-card fade1">
-							<div class="c-how-to-card__img">
-								<img src="./assets/img/img_room.png" alt="room" width="536" height="537" />
-							</div>
-							<div class="c-how-to-card__contents">
-								<div class="c-how-to-card__heading">
-									<div class="c-how-to-card__title-no">04</div>
-									<h3 class="c-how-to-card__title">交換・返送</h3>
-								</div>
-								<p class="c-how-to-card__text">
-									交換や返却の際も、搬出は専門業者に全ておまかせ
-									※一部地域を除く
-								</p>
-							</div>
-						</div>
-						<!-- c-how-to-card -->
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- p-how-to -->
+            <div class="p-faq__btn jsfadeIn">
+              <a href="/" class="c-btn c-btn--qa">よくある質問を見る</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- p-faq -->
+    </main>
+    <!-- p-footer -->
+    <footer id="footer" class="p-footer l-footer jsfadeIn">
+      <div class="p-footer__inner l-inner">
+        <!-- p-footer__container -->
+        <div class="p-footer__container">
+          <div class="p-footer__contents">
+            <!-- p-footer__block -->
+            <div class="p-footer__block">
+              <div class="p-footer__block-title">SERVICE</div>
+              <ul class="p-footer__block-list">
+                <li class="p-footer__block-item">
+                  <a href="/" class="p-footer__block-link">すべて</a>
+                </li>
+                <li class="p-footer__block-item">
+                  <a href="/" class="p-footer__block-link">家具</a>
+                </li>
+                <li class="p-footer__block-item">
+                  <a href="/" class="p-footer__block-link">家電</a>
+                </li>
+                <li class="p-footer__block-item">
+                  <a href="/" class="p-footer__block-link">お知らせ</a>
+                </li>
+                <li class="p-footer__block-item">
+                  <a href="/" class="p-footer__block-link"
+                    >商品の魅力・選び方記事</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- p-footer__block -->
 
-		<!-- p-cta -->
-		<section class="p-cta l-cta fade1">
-			<div class="p-cta__outer">
-				<!-- p-cta__inner -->
-				<div class="p-cta__inner l-inner">
-					<!-- p-cta__contents -->
-					<div class="p-cta__contents">
-						<!-- p-cta__text-block -->
-						<div class="p-cta__text-block fade1">
-							<div class="p-cta__ribbon">今だけ</div>
-							<p class="p-cta__lead">高品質でセンスのいい家具・家電を</p>
-							<p class="p-cta__copy">
-								10%0FF価格で<br class="u-hidden-pc" />レンタルできます。
-							</p>
-						</div>
-						<!-- p-cta__text-block -->
+            <!-- p-footer__block -->
+            <div class="p-footer__block">
+              <div class="p-footer__block-title">ABOUT</div>
+              <ul class="p-footer__block-list">
+                <li class="p-footer__block-item">
+                  <a href="/" class="p-footer__block-link">会社概要</a>
+                </li>
+                <li class="p-footer__block-item">
+                  <a href="/" class="p-footer__block-link">採用情報</a>
+                </li>
+              </ul>
+            </div>
+            <!-- p-footer__block -->
 
-						<!-- p-cta__merit-container -->
-						<div class="p-cta__merit-container fade2">
-							<div class="c-merit-block">月額440円〜</div>
-							<div class="c-merit-block">1ヶ月〜レンタル可能</div>
-							<div class="c-merit-block">長期レンタル割引あり</div>
-						</div>
-						<!-- p-cta__merit-container -->
+            <!-- p-footer__block -->
+            <div class="p-footer__block">
+              <div class="p-footer__block-title">SUPPORT</div>
+              <ul class="p-footer__block-list">
+                <li class="p-footer__block-item">
+                  <a href="/" class="p-footer__block-link">よくある質問</a>
+                </li>
+                <li class="p-footer__block-item">
+                  <a href="/" class="p-footer__block-link"
+                    >お問い合わせ(個人のお客様)</a
+                  >
+                </li>
+                <li class="p-footer__block-item">
+                  <a href="/" class="p-footer__block-link">プライバシー</a>
+                </li>
+                <li class="p-footer__block-item">
+                  <a href="/" class="p-footer__block-link">利用規約</a>
+                </li>
+                <li class="p-footer__block-item">
+                  <a href="/" class="p-footer__block-link"
+                    >法人会員向け利用規約</a
+                  >
+                </li>
+                <li class="p-footer__block-item">
+                  <a href="/" class="p-footer__block-link"
+                    >特定商取引法に基づく表記</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- p-footer__block -->
 
-						<!-- p-cta__btn-container -->
-						<div class="p-cta__btn-container fade2">
-							<div class="c-btn-guide">カンタン！ 3 STEP</div>
-							<a href="#" class="c-btn c-btn--register">今すぐ会員登録</a>
-						</div>
-						<!-- p-cta__btn-container -->
-					</div>
-					<!-- p-cta__contents -->
-				</div>
-				<!-- p-cta__inner -->
-			</div>
-		</section>
-		<!-- p-cta -->
+            <!-- p-footer__block -->
+            <div class="p-footer__block">
+              <div class="p-footer__block-title">CLAS BUSINESS</div>
+              <ul class="p-footer__block-list">
+                <li class="p-footer__block-item">
+                  <a href="/" class="p-footer__block-link"
+                    >法人向けサービスについて</a
+                  >
+                </li>
+                <li class="p-footer__block-item">
+                  <a href="/" class="p-footer__block-link">手軽にためす</a>
+                </li>
+                <li class="p-footer__block-item">
+                  <a href="/" class="p-footer__block-link">まとめておまかせ</a>
+                </li>
+                <li class="p-footer__block-item">
+                  <a href="/" class="p-footer__block-link">導入事例</a>
+                </li>
+              </ul>
+            </div>
+            <!-- p-footer__block -->
+          </div>
+          <!-- p-footer__contents -->
 
-		<!-- p-faq -->
-		<section class="p-faq fade1">
-			<div class="p-faq__inner l-inner">
-				<div class="p-faq__container">
-					<div class="c-section-title">
-						<h2 class="c-section-title__jp">よくある質問</h2>
-						<p class="c-section-title__en">FAQ</p>
-					</div>
+          <div class="p-footer__sns">
+            <ul class="p-footer__sns-list">
+              <li class="p-footer__sns-item">
+                <a href="/"
+                  ><img
+                    src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M20.32%2016.0002C20.32%2013.6002%2018.4%2011.6802%2016%2011.6802C13.6%2011.6802%2011.68%2013.6002%2011.68%2016.0002C11.68%2018.4002%2013.6%2020.3202%2016%2020.3202C18.4%2020.3202%2020.32%2018.4002%2020.32%2016.0002ZM22.56%2016.0002C22.56%2019.6802%2019.68%2022.5602%2016%2022.5602C12.32%2022.5602%209.44%2019.6802%209.44%2016.0002C9.44%2012.3202%2012.32%209.4402%2016%209.4402C19.68%209.4402%2022.56%2012.3202%2022.56%2016.0002ZM24.32%209.12019C24.32%2010.0802%2023.68%2010.7202%2022.72%2010.7202C21.76%2010.7202%2021.12%2010.0802%2021.12%209.12019C21.12%208.16019%2021.76%207.52019%2022.72%207.52019C23.68%207.52019%2024.32%208.32019%2024.32%209.12019ZM16%205.4402C14.08%205.4402%2010.08%205.2802%208.48%205.9202C7.36%206.4002%206.4%207.3602%206.08%208.4802C5.44%2010.0802%205.6%2014.0802%205.6%2016.0002C5.6%2017.9202%205.44%2021.9202%206.08%2023.5202C6.4%2024.6402%207.36%2025.6002%208.48%2025.9202C10.08%2026.5602%2014.24%2026.4002%2016%2026.4002C17.76%2026.4002%2021.92%2026.5602%2023.52%2025.9202C24.64%2025.4402%2025.44%2024.6402%2025.92%2023.5202C26.56%2021.7602%2026.4%2017.7602%2026.4%2016.0002C26.4%2014.2402%2026.56%2010.0802%2025.92%208.4802C25.6%207.3602%2024.64%206.4002%2023.52%206.08019C21.92%205.28019%2017.92%205.4402%2016%205.4402ZM28.8%2016.0002V21.2802C28.8%2023.2002%2028.16%2025.1202%2026.72%2026.7202C25.28%2028.1602%2023.36%2028.8002%2021.28%2028.8002H10.72C8.8%2028.8002%206.88%2028.1602%205.28%2026.7202C4%2025.2802%203.2%2023.3602%203.2%2021.2802V16.0002V10.7202C3.2%208.64019%204%206.7202%205.28%205.28019C6.88%204.0002%208.8%203.2002%2010.72%203.2002H21.28C23.2%203.2002%2025.12%203.8402%2026.72%205.28019C28%206.7202%2028.8%208.64019%2028.8%2010.7202V16.0002Z'%20fill='white'/%3e%3c/svg%3e"
+                    alt="インスタグラム"
+                    width="32"
+                    height="32"
+                    loading="lazy"
+                /></a>
+              </li>
+              <li class="p-footer__sns-item">
+                <a href="/">
+                  <img
+                    src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M29%207.94689C28.0437%208.35939%2027.0031%208.65627%2025.9312%208.77189C27.0441%208.11075%2027.8774%207.06626%2028.275%205.83439C27.2307%206.4556%2026.0867%206.89121%2024.8937%207.12189C24.3951%206.58885%2023.7921%206.1642%2023.1222%205.87441C22.4523%205.58462%2021.7299%205.4359%2021%205.43751C18.0469%205.43751%2015.6719%207.83126%2015.6719%2010.7688C15.6719%2011.1813%2015.7219%2011.5938%2015.8031%2011.9906C11.3812%2011.7594%207.43749%209.64689%204.81562%206.41251C4.33789%207.2285%204.08754%208.1576%204.09062%209.10314C4.09062%2010.9531%205.03124%2012.5844%206.46562%2013.5438C5.62032%2013.5105%204.79482%2013.2781%204.05625%2012.8656V12.9313C4.05625%2015.5219%205.88749%2017.6688%208.32812%2018.1625C7.86986%2018.2816%207.39845%2018.3425%206.92499%2018.3438C6.57812%2018.3438%206.24999%2018.3094%205.91874%2018.2625C6.59374%2020.375%208.55937%2021.9094%2010.9%2021.9594C9.06874%2023.3938%206.77499%2024.2375%204.28437%2024.2375C3.8375%2024.2375%203.425%2024.2219%202.99687%2024.1719C5.35937%2025.6875%208.16249%2026.5625%2011.1812%2026.5625C20.9812%2026.5625%2026.3437%2018.4438%2026.3437%2011.3969C26.3437%2011.1656%2026.3437%2010.9344%2026.3281%2010.7031C27.3656%209.94377%2028.275%209.00314%2029%207.94689Z'%20fill='white'/%3e%3c/svg%3e"
+                    alt="x"
+                    width="32"
+                    height="32"
+                    loading="lazy"
+                  />
+                </a>
+              </li>
+              <li class="p-footer__sns-item">
+                <a href="/">
+                  <img
+                    src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M16.64%2012.8004V10.8804C16.64%2010.0484%2016.832%209.60039%2018.176%209.60039H19.84V6.40039H17.28C14.08%206.40039%2012.8%208.51239%2012.8%2010.8804V12.8004H10.24V16.0004H12.8V25.6004H16.64V16.0004H19.456L19.84%2012.8004H16.64Z'%20fill='white'/%3e%3c/svg%3e"
+                    alt="facebook"
+                    width="32"
+                    height="32"
+                    loading="lazy"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- p-footer__sns -->
 
-					<!-- p-faq__wrapper -->
-					<div class="p-faq__wrapper">
-						<!-- p-faq_qa-box -->
-						<details class="p-faq__qa-box fade1">
-							<summary>
-								<div class="p-faq__body">
-									<div class="p-faq_icon">Q</div>
-									<p>Rich-Lifeはどんなサービスですか？</p>
-								</div>
-							</summary>
-							<div class="p-faq__body p-faq__body--a">
-								<div class="p-faq_icon p-faq_icon--a">A</div>
-								<p>
-									Rich-lifeは必要なときに必要なものだけを使える家具・家電のレンタルサービスです。
-								</p>
-							</div>
-						</details>
-						<!-- p-faq_qa-box -->
-						<!-- p-faq_qa-box -->
-						<details class="p-faq__qa-box fade1">
-							<summary>
-								<div class="p-faq__body">
-									<div class="p-faq_icon">Q</div>
-									<p>レンタル期間は選べますか？</p>
-								</div>
-							</summary>
-							<div class="p-faq__body p-faq__body--a">
-								<div class="p-faq_icon p-faq_icon--a">A</div>
-								<p>
-									レンタル期間は1ヶ月からです。更新手続きは毎月自動で行いますので更新手続きは不要です。
-								</p>
-							</div>
-						</details>
-						<!-- p-faq_qa-box -->
-						<!-- p-faq_qa-box -->
-						<details class="p-faq__qa-box fade1">
-							<summary>
-								<div class="p-faq__body">
-									<div class="p-faq_icon">Q</div>
-									<p>注文してから届くまでどのくらい期間がかかりますか？</p>
-								</div>
-							</summary>
-							<div class="p-faq__body p-faq__body--a">
-								<div class="p-faq_icon p-faq_icon--a">A</div>
-								<p>
-									商品とお住まいの地域によりますが、約1週間ほどでお届けいたします。
-								</p>
-							</div>
-						</details>
-						<!-- p-faq_qa-box -->
-						<!-- p-faq_qa-box -->
-						<details class="p-faq__qa-box fade1">
-							<summary>
-								<div class="p-faq__body">
-									<div class="p-faq_icon">Q</div>
-									<p>商品の交換は可能ですか？</p>
-								</div>
-							</summary>
-							<div class="p-faq__body p-faq__body--a">
-								<div class="p-faq_icon p-faq_icon--a">A</div>
-								<p>
-									可能でございます。マイページより交換申請手続きをお願いいたします。
-								</p>
-							</div>
-						</details>
-						<!-- p-faq_qa-box -->
-						<!-- p-faq_qa-box -->
-						<details class="p-faq__qa-box p-faq__qa-box--mts fade1">
-							<summary>
-								<div class="p-faq__body">
-									<div class="p-faq_icon">Q</div>
-									<p>申込の仕方を教えてください。</p>
-								</div>
-							</summary>
-							<div class="p-faq__body p-faq__body--a">
-								<div class="p-faq_icon p-faq_icon--a">A</div>
-								<p>
-									1.ご希望の商品を選択し、カートへ入れてください。<br />
-									2.右上のカートボタンを押し、お届け先と支払い情報の登録をお願いいたします。<br />
-									3.配送日を選択し、注文確定ボタンを押していただけましたら注文完了となります。<br />
-								</p>
-							</div>
-						</details>
-						<!-- p-faq_qa-box -->
-					</div>
-					<!-- p-faq__wrapper -->
-
-					<div class="p-faq__btn fade1">
-						<a href="#" class="c-btn c-btn--qa">よくある質問を見る</a>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- p-faq -->
-	</main>
-	<!-- p-footer -->
-	<footer id="footer" class="p-footer l-footer fade1">
-		<div class="p-footer__inner l-inner">
-			<!-- p-footer__container -->
-			<div class="p-footer__container">
-				<div class="p-footer__contents">
-					<!-- p-footer__block -->
-					<div class="p-footer__block">
-						<div class="p-footer__block-title">SERVICE</div>
-						<ul class="p-footer__block-list">
-							<li class="p-footer__block-item">
-								<a href="#" class="p-footer__block-link">すべて</a>
-							</li>
-							<li class="p-footer__block-item">
-								<a href="#" class="p-footer__block-link">家具</a>
-							</li>
-							<li class="p-footer__block-item">
-								<a href="#" class="p-footer__block-link">家電</a>
-							</li>
-							<li class="p-footer__block-item">
-								<a href="#" class="p-footer__block-link">お知らせ</a>
-							</li>
-							<li class="p-footer__block-item">
-								<a href="#" class="p-footer__block-link">商品の魅力・選び方記事</a>
-							</li>
-						</ul>
-					</div>
-					<!-- p-footer__block -->
-
-					<!-- p-footer__block -->
-					<div class="p-footer__block">
-						<div class="p-footer__block-title">ABOUT</div>
-						<ul class="p-footer__block-list">
-							<li class="p-footer__block-item">
-								<a href="#" class="p-footer__block-link">会社概要</a>
-							</li>
-							<li class="p-footer__block-item">
-								<a href="#" class="p-footer__block-link">採用情報</a>
-							</li>
-						</ul>
-					</div>
-					<!-- p-footer__block -->
-
-					<!-- p-footer__block -->
-					<div class="p-footer__block">
-						<div class="p-footer__block-title">SUPPORT</div>
-						<ul class="p-footer__block-list">
-							<li class="p-footer__block-item">
-								<a href="#" class="p-footer__block-link">よくある質問</a>
-							</li>
-							<li class="p-footer__block-item">
-								<a href="#" class="p-footer__block-link">お問い合わせ(個人のお客様)</a>
-							</li>
-							<li class="p-footer__block-item">
-								<a href="#" class="p-footer__block-link">プライバシー</a>
-							</li>
-							<li class="p-footer__block-item">
-								<a href="#" class="p-footer__block-link">利用規約</a>
-							</li>
-							<li class="p-footer__block-item">
-								<a href="#" class="p-footer__block-link">法人会員向け利用規約</a>
-							</li>
-							<li class="p-footer__block-item">
-								<a href="#" class="p-footer__block-link">特定商取引法に基づく表記</a>
-							</li>
-						</ul>
-					</div>
-					<!-- p-footer__block -->
-
-					<!-- p-footer__block -->
-					<div class="p-footer__block">
-						<div class="p-footer__block-title">CLAS BUSINESS</div>
-						<ul class="p-footer__block-list">
-							<li class="p-footer__block-item">
-								<a href="#" class="p-footer__block-link">法人向けサービスについて</a>
-							</li>
-							<li class="p-footer__block-item">
-								<a href="#" class="p-footer__block-link">手軽にためす</a>
-							</li>
-							<li class="p-footer__block-item">
-								<a href="#" class="p-footer__block-link">まとめておまかせ</a>
-							</li>
-							<li class="p-footer__block-item">
-								<a href="#" class="p-footer__block-link">導入事例</a>
-							</li>
-						</ul>
-					</div>
-					<!-- p-footer__block -->
-				</div>
-				<!-- p-footer__contents -->
-
-				<div class="p-footer__sns">
-					<ul class="p-footer__sns-list">
-						<li class="p-footer__sns-item">
-							<a href="#"><img src="./assets/img/icon/instagram-icon.svg" alt="インスタグラム" width="32" height="32" /></a>
-						</li>
-						<li class="p-footer__sns-item">
-							<a href="#">
-								<img src="./assets/img/icon/x-icon.svg" alt="x" width="32" height="32" />
-							</a>
-						</li>
-						<li class="p-footer__sns-item">
-							<a href="#">
-								<img src="./assets/img/icon/facebook-icon.svg" alt="facebook" width="32" height="32" />
-							</a>
-						</li>
-					</ul>
-				</div>
-				<!-- p-footer__sns -->
-
-				<!-- p-footer__text-block -->
-				<div class="p-footer__text-block">
-					<p class="p-footer__notice">
-						本サイト内は株式会社CLAS様のご協力のもと作成したコーディング用の練習課題です。実在の人物・団体とは関係ありません。
-					</p>
-					<small class="p-footer-copyright">©️ 2022 Rich-Life Inc.</small>
-				</div>
-				<!-- p-footer__text-block -->
-			</div>
-			<!-- p-footer__container -->
-		</div>
-	</footer>
-	<!-- p-footer -->
-	<script src="https://unpkg.com/scrollreveal"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script src="./assets/js/script.js"></script>
-</body>
-
+          <!-- p-footer__text-block -->
+          <div class="p-footer__text-block">
+            <p class="p-footer__notice">
+              本サイト内は株式会社CLAS様のご協力のもと作成したコーディング用の練習課題です。実在の人物・団体とは関係ありません。
+            </p>
+            <small class="p-footer-copyright">©️ 2022 Rich-Life Inc.</small>
+          </div>
+          <!-- p-footer__text-block -->
+        </div>
+        <!-- p-footer__container -->
+      </div>
+    </footer>
+    <!-- p-footer -->
+  </body>
 </html>
